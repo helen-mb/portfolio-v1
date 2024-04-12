@@ -1,13 +1,11 @@
-import '@mantine/core/styles.css';
-import { MantineProvider } from '@mantine/core';
+import MobileNav from './components/MobileNav';
 
 function App() {
   return (
-    <MantineProvider>
-      <>
-        <h1>this is an app</h1>
-      </>
-    </MantineProvider>
+    <>
+      <MobileNav />
+      <div>Hello World</div>
+    </>
   );
 }
 
