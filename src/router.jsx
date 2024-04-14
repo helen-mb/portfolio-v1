@@ -32,3 +32,4 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+// TODO: handle errors and data loading
