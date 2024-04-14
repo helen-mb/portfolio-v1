@@ -7,7 +7,7 @@ function MobileNav() {
   const { tabValue } = useParams();
 
   return (
-    <Affix hiddenFrom="xs">
+    <Affix hiddenFrom="xs" position={{ bottom: 0, left: 0, right: 0 }}>
       <Tabs
         activateTabWithKeyboard={false}
         value={tabValue}
