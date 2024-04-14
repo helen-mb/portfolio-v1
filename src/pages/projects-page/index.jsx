@@ -1,4 +1,5 @@
 import { Title, Text, Card, Image, Box, Group } from '@mantine/core';
+import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 
 export default function Projects() {
@@ -22,7 +23,7 @@ export default function Projects() {
           </Text>
           <Group justify="space-between">
             <Text>Launch</Text>
-            <Text>Read</Text>
+            <Link to={'../details'}>Read</Link>
           </Group>
         </Box>
       </Card>

@@ -1,4 +1,5 @@
 import { Title, Text, Paper, Stack, Box, Group } from '@mantine/core';
+import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
             </Box>
             <Group justify="space-between">
               <Text>Launch</Text>
-              <Text>Read</Text>
+              <Link to={'../details'}>Read</Link>
             </Group>
           </Stack>
         </Paper>
@@ -29,7 +30,7 @@ export default function Home() {
             </Box>
             <Group justify="space-between">
               <Text>Launch</Text>
-              <Text>Read</Text>
+              <Link to={'../details'}>Read</Link>
             </Group>
           </Stack>
         </Paper>
@@ -41,7 +42,7 @@ export default function Home() {
             </Box>
             <Group justify="space-between">
               <Text>Launch</Text>
-              <Text>Read</Text>
+              <Link to={'../details'}>Read</Link>
             </Group>
           </Stack>
         </Paper>
