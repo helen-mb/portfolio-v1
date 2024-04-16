@@ -1,6 +1,6 @@
-import { Title, Text, Paper, Stack, Box, Group } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import { Title, Text } from '@mantine/core';
 import Footer from '../../components/Footer';
+import FeaturedProject from './featured-project';
 
 export default function Home() {
   return (
@@ -10,42 +10,9 @@ export default function Home() {
       <section id="featured-projects">
         <Title order={2}>Featured Projects</Title>
         {/* TODO: rewrite as a loop */}
-        <Paper radius="sm" withBorder>
-          <Stack justify="space-between">
-            <Box>
-              <Title order={3}>Project Name</Title>
-              <Text>HTML | SCSS | JQuery</Text>
-            </Box>
-            <Group justify="space-between">
-              <Text>Launch</Text>
-              <Link to={'../details'}>Read</Link>
-            </Group>
-          </Stack>
-        </Paper>
-        <Paper radius="sm" withBorder>
-          <Stack justify="space-between">
-            <Box>
-              <Title order={3}>Project Name</Title>
-              <Text>HTML | SCSS | JQuery</Text>
-            </Box>
-            <Group justify="space-between">
-              <Text>Launch</Text>
-              <Link to={'../details'}>Read</Link>
-            </Group>
-          </Stack>
-        </Paper>
-        <Paper radius="sm" withBorder>
-          <Stack justify="space-between">
-            <Box>
-              <Title order={3}>Project Name</Title>
-              <Text>HTML | SCSS | JQuery</Text>
-            </Box>
-            <Group justify="space-between">
-              <Text>Launch</Text>
-              <Link to={'../details'}>Read</Link>
-            </Group>
-          </Stack>
-        </Paper>
+        <FeaturedProject />
+        <FeaturedProject />
+        <FeaturedProject />
       </section>
       <Footer />
     </div>
