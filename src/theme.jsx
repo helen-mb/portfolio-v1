@@ -26,12 +26,6 @@ const myGreen = [
   '#F7FFE2',
 ];
 
-const myGradient = {
-  from: 'myBlue.5',
-  to: 'myGreen.5',
-  deg: 45,
-};
-
 export const theme = createTheme({
   // theme override
   fontFamily: 'Noto Sans, Open Sans, sans-serif',
@@ -45,5 +39,4 @@ export const theme = createTheme({
   primaryColor: 'myBlue',
   primaryShade: 3,
   respectReducedMotion: true,
-  defaultGradient: myGradient,
 });

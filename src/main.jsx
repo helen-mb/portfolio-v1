@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 //styles
 import './index.css';
+import './styles/variables.css';
 import { theme } from './theme.jsx';
 //Router
 import { RouterProvider } from 'react-router-dom';

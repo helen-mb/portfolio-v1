@@ -1,4 +1,5 @@
 import { Center, Stack, Text } from '@mantine/core';
+import classes from '../styles/Footer.module.css';
 
 export default function Footer() {
   return (
