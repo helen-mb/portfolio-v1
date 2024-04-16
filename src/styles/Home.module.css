@@ -2,25 +2,18 @@
 	min-height: 100vh;
 }
 
-.paper {
-	position: relative;
+.hero h1 {
+	font-size: 30vw;
+	line-height: 0.7;
+	font-weight: 900;
+	margin-bottom: 1rem;
 }
 
-.paper:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: var(--custom-gradient);
-}
-
-.backgroundImage {
-	height: 100%;
-	filter: grayscale(100%);
-}
-
-.stack {
-	padding: 0.5rem;
+.circle {
+	height: 80vw;
+	width: 80vw;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: linear-gradient(30deg, var(--mantine-color-myGreen-9) 0%, var(--mantine-color-myGreen-5) 100%);
+	margin: -3rem auto;
 }
