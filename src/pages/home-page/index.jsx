@@ -1,6 +1,7 @@
 import { Title, Text } from '@mantine/core';
 import Footer from '../../components/Footer';
 import FeaturedProject from './featured-project';
+import classes from '../../styles/Home.module.css';
 
 export default function Home() {
   return (

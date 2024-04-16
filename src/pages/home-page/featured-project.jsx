@@ -10,7 +10,7 @@ import {
 } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import IMAGES from '../../images/Images';
-import classes from '../../styles/Home.module.css';
+import classes from '../../styles/FeaturedProject.module.css';
 
 export default function FeaturedProject() {
   return (
