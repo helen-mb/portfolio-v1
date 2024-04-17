@@ -1,0 +1,56 @@
+.introBox {
+	height: 60vh;
+}
+
+.introBox>div {
+	height: 100%;
+}
+
+.circle {
+	height: 80vw;
+	width: 80vw;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: linear-gradient(30deg, var(--mantine-color-myGreen-9) 0%, var(--mantine-color-myGreen-5) 100%);
+	margin: auto;
+}
+
+p.xlIntroText {
+	font-weight: 900;
+	font-size: 1.5rem;
+	line-height: 1.3;
+	margin-bottom: 1rem;
+}
+
+/* Accordion Styles */
+
+.accordionTitle span {
+	font-weight: 700;
+}
+
+.accordionContent {
+	border-bottom: 10px solid;
+	border-image-slice: 1;
+	border-width: 5px;
+	border-image-source: var(--custom-gradient);
+}
+
+.accordionContent [class*=Paper] {
+	padding: 1rem;
+	/* border-image-slice: 1;
+	border-width: 5px;
+	border-image-source: var(--custom-gradient); */
+}
+
+/* Quote Styles */
+blockquote.blockquote{
+	margin: 2rem 1rem;
+	border-image-slice: 1;
+	border-width: 5px;
+	border-image-source: var(--custom-gradient);
+	background-color: transparent;
+}
+
+blockquote.blockquote svg {
+	color: var(--mantine-color-myBlue-6)
+}

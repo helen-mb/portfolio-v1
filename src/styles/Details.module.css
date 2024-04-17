@@ -1,0 +1,29 @@
+.hero {
+	min-height: 100vh;
+}
+
+.hero h2 {
+	font-size: 15vw;
+	line-height: 0.7;
+	font-weight: 900;
+	margin-top: 2rem;
+}
+
+.circle {
+	height: 80vw;
+	width: 80vw;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: linear-gradient(30deg, rgba(176, 237, 23, 0.8) 0%, rgba(247, 255, 226, 0.8) 100%);
+	margin: 20vh auto;
+}
+
+[class*=Center] {
+	min-height: 100%;
+	text-align: center;
+}
+
+.backgroundImage::after {
+	min-height: 100vh;
+	background: var(--custom-gradient);
+}
