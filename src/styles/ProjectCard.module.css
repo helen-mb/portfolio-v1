@@ -1,0 +1,19 @@
+.container {
+	position: relative;
+}
+
+.container:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--custom-gradient);
+	opacity: 80%;
+}
+
+.backgroundImage {
+	height: 100%;
+	filter: grayscale(100%);
+}
