@@ -1,0 +1,12 @@
+.root {
+	background-color: var(--mantine-color-myBlue-9);
+}
+
+button.tab {
+	padding-top: 0.3rem;
+	padding-bottom: 0.2rem;
+}
+
+.tab svg {
+	transform: scale(0.9);
+}
