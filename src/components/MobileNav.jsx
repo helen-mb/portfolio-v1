@@ -8,13 +8,16 @@ function MobileNav() {
   const navigate = useNavigate();
   const { tabValue } = useParams();
   const [scroll, scrollTo] = useWindowScroll();
+  function navigateOnChange(value) {
+    value === 'home' ? navigate('/') : navigate(`/${value}`);
+  }
 
   return (
     <Affix hiddenFrom="xs" position={{ bottom: 0, left: 0, right: 0 }}>
       <Tabs
         activateTabWithKeyboard={false}
         value={tabValue}
-        onChange={(value) => navigate(`/${value}`)}
+        onChange={(value) => navigateOnChange(`/${value}`)}
         classNames={classes}
       >
         <Tabs.List grow justify="center" aria-label="Main Menu">

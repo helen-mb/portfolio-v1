@@ -5,13 +5,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 function MobileNav() {
   const navigate = useNavigate();
   const { tabValue } = useParams();
+  function navigateOnChange(value) {
+    value === 'home' ? navigate('/') : navigate(`/${value}`);
+  }
 
   return (
     <Container visibleFrom="xs">
       <Tabs
         activateTabWithKeyboard={false}
         value={tabValue}
-        onChange={(value) => navigate(`/${value}`)}
+        onChange={(value) => navigateOnChange(value)}
       >
         <Tabs.List grow justify="center">
           <Tabs.Tab value="home">
