@@ -11,13 +11,12 @@ export default function Home() {
         <Title order={1}>Helen Burger</Title>
         <Text>Designer | Developer</Text>
       </Box>
-      <section id="featured-projects">
-        <Title order={2}>Featured Projects</Title>
+      <Box id="featured-projects">
         {/* TODO: rewrite as a loop */}
         <FeaturedProject />
         <FeaturedProject />
         <FeaturedProject />
-      </section>
+      </Box>
       <Footer />
     </div>
   );

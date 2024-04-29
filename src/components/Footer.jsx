@@ -8,7 +8,7 @@ import classes from '../styles/Footer.module.css';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="contact">
       <Center>
         <Stack align="center" gap={'xs'}>
           <Text fw={'bold'}>Get in Touch!</Text>
