@@ -1,3 +1,5 @@
+/* Mobile Styles */
+
 .aspectRatio {
 	margin: 1rem 0.5rem;
 }
@@ -23,4 +25,12 @@
 
 .stack {
 	padding: 0.5rem;
+	height: 100%;
+}
+
+/* Desktop Styles */
+
+.desktop_paper {
+	aspect-ratio: 8 / 11;
+	flex: auto;
 }

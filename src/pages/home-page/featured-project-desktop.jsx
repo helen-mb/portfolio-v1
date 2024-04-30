@@ -12,16 +12,9 @@ import { Link } from 'react-router-dom';
 import IMAGES from '../../images/Images';
 import classes from '../../styles/FeaturedProject.module.css';
 
-export default function FeaturedProject() {
+export default function DesktopFeaturedProject() {
   return (
-    <AspectRatio ratio={16 / 8} maw={400} className={classes.aspectRatio}>
-      <Paper radius={'sm'} withBorder className={classes.paper}>
-        <BackgroundImage
-          src={IMAGES.testImage}
-          radius={'sm'}
-          className={classes.backgroundImage}
-        />
-      </Paper>
+    <Paper radius={'sm'} withBorder className={classes.desktop_paper}>
       <Stack justify="space-between" className={classes.stack}>
         <Box>
           <Title order={3}>Project Name</Title>
@@ -32,6 +25,6 @@ export default function FeaturedProject() {
           <Link to={'../details'}>Read</Link>
         </Group>
       </Stack>
-    </AspectRatio>
+    </Paper>
   );
 }

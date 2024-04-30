@@ -1,6 +1,6 @@
 .hero {
 	min-height: 100vh;
-		margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .hero h1 {
@@ -17,4 +17,8 @@
 	border-radius: 50%;
 	background: linear-gradient(30deg, var(--mantine-color-myGreen-9) 0%, var(--mantine-color-myGreen-5) 100%);
 	margin: -3rem auto;
+}
+
+.image_container {
+	padding: 1rem;
 }
