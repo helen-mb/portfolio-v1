@@ -1,6 +1,12 @@
 import { Affix, Tabs, Stack, Text } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
-import { IconHome, IconBooks, IconUser, IconMail } from '@tabler/icons-react';
+import {
+  IconCircle,
+  IconHome,
+  IconBooks,
+  IconUser,
+  IconMail,
+} from '@tabler/icons-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import classes from '../styles/MobileNav.module.css';
 
@@ -23,7 +29,7 @@ function MobileNav() {
         <Tabs.List grow justify="center" aria-label="Main Menu">
           <Tabs.Tab value="home" onClick={() => scrollTo({ y: 0 })}>
             <Stack align="center" gap={'0'}>
-              <IconHome />
+              <IconCircle />
               <Text size="xs">Home</Text>
             </Stack>
           </Tabs.Tab>

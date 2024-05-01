@@ -1,0 +1,31 @@
+.root {
+	background-color: var(--mantine-color-myBlue-9);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	width: 100vw;
+}
+
+button.tab {
+	padding-top: 0.3rem;
+	padding-bottom: 0.2rem;
+	margin: 0.5rem;
+}
+
+.tab svg {
+	transform: scale(0.9);
+}
+
+.tab {
+
+	width: 4.5rem;
+
+	&:first-of-type {
+		width: 3rem;
+	}
+
+	&[data-active] p {
+	font-weight: 600;
+	}
+}

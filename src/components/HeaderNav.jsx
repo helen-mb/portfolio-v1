@@ -1,6 +1,7 @@
 import { Container, Tabs, Stack, Text } from '@mantine/core';
-import { IconHome, IconBooks, IconUser, IconMail } from '@tabler/icons-react';
+import { IconCircle, IconBooks, IconUser, IconMail } from '@tabler/icons-react';
 import { useNavigate, useParams } from 'react-router-dom';
+import classes from '../styles/DesktopNav.module.css';
 
 function MobileNav() {
   const navigate = useNavigate();
@@ -15,31 +16,21 @@ function MobileNav() {
         activateTabWithKeyboard={false}
         value={tabValue}
         onChange={(value) => navigateOnChange(value)}
+        classNames={classes}
+        variant="unstyled"
       >
-        <Tabs.List grow justify="center">
-          <Tabs.Tab value="home">
-            <Stack align="center" gap={'0'}>
-              <IconHome />
-              <Text size="xs">Home</Text>
-            </Stack>
+        <Tabs.List justify="flex-end" classNames={classes}>
+          <Tabs.Tab value="home" mr={'auto'}>
+            <IconCircle />
           </Tabs.Tab>
           <Tabs.Tab value="projects">
-            <Stack align="center" gap={'0'}>
-              <IconBooks />
-              <Text size="xs">Projects</Text>
-            </Stack>
+            <Text size="md">Projects</Text>
           </Tabs.Tab>
           <Tabs.Tab value="about">
-            <Stack align="center" gap={'0'}>
-              <IconUser />
-              <Text size="xs">About</Text>
-            </Stack>
+            <Text size="md">About</Text>
           </Tabs.Tab>
           <Tabs.Tab value="contact">
-            <Stack align="center" gap={'0'}>
-              <IconMail />
-              <Text size="xs">Contact</Text>
-            </Stack>
+            <Text size="md">Contact</Text>
           </Tabs.Tab>
         </Tabs.List>
       </Tabs>
