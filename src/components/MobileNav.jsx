@@ -17,7 +17,7 @@ function MobileNav() {
       <Tabs
         activateTabWithKeyboard={false}
         value={tabValue}
-        onChange={(value) => navigateOnChange(`/${value}`)}
+        onChange={(value) => navigateOnChange(value)}
         classNames={classes}
       >
         <Tabs.List grow justify="center" aria-label="Main Menu">
