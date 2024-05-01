@@ -5,6 +5,7 @@ import {
   Stack,
   Box,
   Group,
+  Anchor,
   BackgroundImage,
   AspectRatio,
 } from '@mantine/core';
@@ -21,8 +22,12 @@ export default function DesktopFeaturedProject() {
           <Text>HTML | SCSS | JQuery</Text>
         </Box>
         <Group justify="space-between">
-          <Text>Launch</Text>
-          <Link to={'../details'}>Read</Link>
+          <Anchor href="https://www.google.com" target="_blank">
+            Launch
+          </Anchor>
+          <Anchor component={Link} to={'details'}>
+            Read
+          </Anchor>
         </Group>
       </Stack>
     </Paper>

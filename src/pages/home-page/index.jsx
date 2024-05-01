@@ -20,7 +20,12 @@ export default function Home() {
         <MobileFeaturedProject />
         <MobileFeaturedProject />
       </Box>
-      <Flex visibleFrom="sm" gap={'xs'} className={classes.image_container}>
+      <Flex
+        visibleFrom="sm"
+        gap={{ base: 'xs', md: 'md', lg: 'xl' }}
+        className={classes.image_container}
+        justify={'center'}
+      >
         <DesktopFeaturedProject />
         <DesktopFeaturedProject />
         <DesktopFeaturedProject />

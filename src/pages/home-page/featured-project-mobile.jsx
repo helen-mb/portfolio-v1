@@ -7,6 +7,7 @@ import {
   Group,
   BackgroundImage,
   AspectRatio,
+  Anchor,
 } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import IMAGES from '../../images/Images';
@@ -28,8 +29,12 @@ export default function MobileFeaturedProject() {
           <Text>HTML | SCSS | JQuery</Text>
         </Box>
         <Group justify="space-between">
-          <Text>Launch</Text>
-          <Link to={'../details'}>Read</Link>
+          <Anchor href="https://www.google.com" target="_blank">
+            Launch
+          </Anchor>
+          <Anchor component={Link} to={'details'}>
+            Read
+          </Anchor>
         </Group>
       </Stack>
     </AspectRatio>
