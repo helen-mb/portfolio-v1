@@ -3,8 +3,9 @@ footer {
 	height: 100vh;
 	text-align: center;
 	padding: 0.5rem;
-}
+	margin-top: 5rem;
 
-footer div {
-	min-height: 100%;
+	div {
+		min-height: 100%;
+	}
 }
