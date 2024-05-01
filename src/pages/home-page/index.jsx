@@ -9,8 +9,10 @@ export default function Home() {
     <div id="home">
       <Box className={classes.hero}>
         <div className={classes.circle}></div>
-        <Title order={1}>Helen Burger</Title>
-        <Text>Designer | Developer</Text>
+        <Box className={classes.title_box}>
+          <Title order={1}>Helen Burger</Title>
+          <Text>Designer | Developer</Text>
+        </Box>
       </Box>
       <Box id="featured-projects" hiddenFrom="sm">
         {/* TODO: rewrite as a loop */}
