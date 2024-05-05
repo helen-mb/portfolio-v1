@@ -1,5 +1,4 @@
 import { Title, Text, Box, Flex } from '@mantine/core';
-import Footer from '../../components/Footer';
 import MobileFeaturedProject from './featured-project-mobile';
 import DesktopFeaturedProject from './featured-project-desktop';
 import classes from '../../styles/Home.module.css';
@@ -30,7 +29,6 @@ export default function Home() {
         <DesktopFeaturedProject />
         <DesktopFeaturedProject />
       </Flex>
-      <Footer />
     </div>
   );
 }

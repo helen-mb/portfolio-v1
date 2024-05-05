@@ -1,15 +1,27 @@
-import { Container, Tabs, Stack, Text } from '@mantine/core';
-import { IconCircle, IconBooks, IconUser, IconMail } from '@tabler/icons-react';
+import { Container, Tabs, Anchor, Text } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
+import { IconCircle } from '@tabler/icons-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import classes from '../styles/DesktopNav.module.css';
 
 function MobileNav() {
   const navigate = useNavigate();
   const { tabValue } = useParams();
+  const [scroll, scrollTo] = useWindowScroll();
   function navigateOnChange(value) {
     value === 'home' ? navigate('/') : navigate(`/${value}`);
   }
-
+  const scrollToContact = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    console.log(targetElement);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
   return (
     <Container visibleFrom="xs">
       <Tabs
@@ -20,18 +32,22 @@ function MobileNav() {
         variant="unstyled"
       >
         <Tabs.List justify="flex-end" classNames={classes}>
-          <Tabs.Tab value="home" mr={'auto'}>
+          <Tabs.Tab value="home" mr={'auto'} onClick={() => scrollTo({ y: 0 })}>
             <IconCircle />
           </Tabs.Tab>
-          <Tabs.Tab value="projects">
+          <Tabs.Tab value="projects" onClick={() => scrollTo({ y: 0 })}>
             <Text size="md">Projects</Text>
           </Tabs.Tab>
-          <Tabs.Tab value="about">
+          <Tabs.Tab value="about" onClick={() => scrollTo({ y: 0 })}>
             <Text size="md">About</Text>
           </Tabs.Tab>
-          <Tabs.Tab value="contact">
+          <Anchor
+            href="#contact"
+            onClick={(e) => scrollToContact(e, 'contact')}
+            className={classes.contactButton}
+          >
             <Text size="md">Contact</Text>
-          </Tabs.Tab>
+          </Anchor>
         </Tabs.List>
       </Tabs>
     </Container>

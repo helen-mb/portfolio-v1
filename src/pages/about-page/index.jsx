@@ -18,7 +18,6 @@ import {
   IconUserHeart,
   IconSparkles,
 } from '@tabler/icons-react';
-import Footer from '../../components/Footer';
 import classes from '../../styles/About.module.css';
 
 export default function About() {
@@ -157,7 +156,6 @@ export default function About() {
         <div className={classes.circle}></div>
         <div className={classes.spacer}></div>
       </Box>
-      <Footer />
     </div>
   );
 }

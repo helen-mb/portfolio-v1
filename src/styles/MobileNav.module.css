@@ -1,10 +1,18 @@
 .root {
 	background-color: var(--mantine-color-myBlue-9);
+	padding-right: 1rem;
 }
 
-button.tab {
+button.tab,
+a.contactButton {
 	padding-top: 0.3rem;
 	padding-bottom: 0.2rem;
+	margin: 0 auto;
+	color: black;
+}
+
+a.contactButton:hover {
+	text-decoration: none;
 }
 
 .tab svg {

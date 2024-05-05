@@ -5,12 +5,21 @@
 	left: 0;
 	z-index: 100;
 	width: 100vw;
+	padding-right: 1rem;
 }
 
-button.tab {
+button.tab,
+a.contactButton {
 	padding-top: 0.3rem;
 	padding-bottom: 0.2rem;
 	margin: 0.5rem;
+	color: black;
+}
+
+button.tab:hover,
+a.contactButton:hover {
+	text-decoration: none;
+	color: var(--mantine-color-myBlue-3);
 }
 
 .tab svg {

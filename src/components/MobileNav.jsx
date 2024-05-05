@@ -1,12 +1,6 @@
-import { Affix, Tabs, Stack, Text } from '@mantine/core';
+import { Affix, Tabs, Stack, Text, Anchor } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
-import {
-  IconCircle,
-  IconHome,
-  IconBooks,
-  IconUser,
-  IconMail,
-} from '@tabler/icons-react';
+import { IconCircle, IconBooks, IconUser, IconMail } from '@tabler/icons-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import classes from '../styles/MobileNav.module.css';
 
@@ -17,6 +11,17 @@ function MobileNav() {
   function navigateOnChange(value) {
     value === 'home' ? navigate('/') : navigate(`/${value}`);
   }
+  const scrollToContact = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    console.log(targetElement);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
     <Affix hiddenFrom="xs" position={{ bottom: 0, left: 0, right: 0 }}>
@@ -25,8 +30,9 @@ function MobileNav() {
         value={tabValue}
         onChange={(value) => navigateOnChange(value)}
         classNames={classes}
+        variant="unstyled"
       >
-        <Tabs.List grow justify="center" aria-label="Main Menu">
+        <Tabs.List aria-label="Main Menu">
           <Tabs.Tab value="home" onClick={() => scrollTo({ y: 0 })}>
             <Stack align="center" gap={'0'}>
               <IconCircle />
@@ -45,12 +51,16 @@ function MobileNav() {
               <Text size="xs">About</Text>
             </Stack>
           </Tabs.Tab>
-          <Tabs.Tab value="contact" onClick={() => scrollTo({ y: 0 })}>
+          <Anchor
+            href="#contact"
+            onClick={(e) => scrollToContact(e, 'contact')}
+            className={classes.contactButton}
+          >
             <Stack align="center" gap={'0'}>
               <IconMail />
               <Text size="xs">Contact</Text>
             </Stack>
-          </Tabs.Tab>
+          </Anchor>
         </Tabs.List>
       </Tabs>
     </Affix>

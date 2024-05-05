@@ -1,5 +1,4 @@
-import { Title, Box, Grid } from '@mantine/core';
-import Footer from '../../components/Footer';
+import { Title, Grid } from '@mantine/core';
 import ProjectCard from './project-card';
 
 export default function Projects() {
@@ -18,7 +17,6 @@ export default function Projects() {
           <ProjectCard />
         </Grid.Col>
       </Grid>
-      <Footer />
     </div>
   );
 }

@@ -5,7 +5,6 @@ import ErrorPage from './routes/error-page.jsx';
 import HomePage from './routes/home-page.jsx';
 import ProjectsPage from './routes/projects-page.jsx';
 import AboutPage from './routes/about-page.jsx';
-import ContactPage from './routes/contact-page.jsx';
 import DetailsPage from './routes/details-page.jsx';
 
 export const router = createBrowserRouter([
@@ -25,10 +24,6 @@ export const router = createBrowserRouter([
       {
         path: 'about',
         element: <AboutPage />,
-      },
-      {
-        path: 'contact',
-        element: <ContactPage />,
       },
       {
         // TODO: Add project id
