@@ -9,10 +9,19 @@ a.contactButton {
 	padding-bottom: 0.2rem;
 	margin: 0 auto;
 	color: black;
+	width: 4rem;
 }
 
 a.contactButton:hover {
 	text-decoration: none;
+}
+
+button.tab:active,
+a.contactButton:active {
+	background-color: var(--mantine-color-myBlue-3);
+	color: white;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 
 .tab svg {

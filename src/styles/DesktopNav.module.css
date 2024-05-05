@@ -10,16 +10,24 @@
 
 button.tab,
 a.contactButton {
-	padding-top: 0.3rem;
-	padding-bottom: 0.2rem;
-	margin: 0.5rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.6rem;
+	margin: 0 0.5rem;
 	color: black;
+	width: 5rem
+}
+
+a.contactButton {
+	text-align: center;
 }
 
 button.tab:hover,
 a.contactButton:hover {
 	text-decoration: none;
-	color: var(--mantine-color-myBlue-3);
+	background-color: var(--mantine-color-myBlue-3);
+	color: white;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 
 .tab svg {
@@ -27,8 +35,6 @@ a.contactButton:hover {
 }
 
 .tab {
-
-	width: 4.5rem;
 
 	&:first-of-type {
 		width: 3rem;

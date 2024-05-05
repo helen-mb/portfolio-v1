@@ -11,7 +11,7 @@ export default function Footer() {
     <footer id="contact">
       <Center>
         <Stack align="center" gap={'xs'}>
-          <Text fw={'bold'}>Get in Touch!</Text>
+          <Text>Get in Touch!</Text>
           <Text>
             Find me on Linkedin, read my code on Github, and see my art on
             Instagram
@@ -26,6 +26,7 @@ export default function Footer() {
               target="_blank"
               href="https://www.linkedin.com/in/helen-burger/"
               aria-label="Link to LinkedIn"
+              className={classes.socialLink}
             >
               <IconBrandLinkedin />
             </ActionIcon>
@@ -38,6 +39,7 @@ export default function Footer() {
               target="_blank"
               href="https://github.com/helen-mb"
               aria-label="Link to Github"
+              className={classes.socialLink}
             >
               <IconBrandGithub />
             </ActionIcon>
@@ -50,6 +52,7 @@ export default function Footer() {
               target="_blank"
               href="https://www.instagram.com/scribbles_by.helen/"
               aria-label="Link to Instagram"
+              className={classes.socialLink}
             >
               <IconBrandInstagram />
             </ActionIcon>
