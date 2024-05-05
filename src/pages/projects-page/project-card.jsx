@@ -37,7 +37,7 @@ export default function ProjectCard() {
           <Anchor href="https://www.google.com" target="_blank">
             Launch
           </Anchor>
-          <Anchor component={Link} to={'details'}>
+          <Anchor component={Link} to={'/details'}>
             Read
           </Anchor>
         </Group>

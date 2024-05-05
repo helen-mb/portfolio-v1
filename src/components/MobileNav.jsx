@@ -14,7 +14,6 @@ function MobileNav() {
   const scrollToContact = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
-    console.log(targetElement);
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: 'smooth',
