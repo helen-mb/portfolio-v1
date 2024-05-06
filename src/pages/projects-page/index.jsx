@@ -5,7 +5,9 @@ import { projectContents } from '../../data/projectContent';
 export default function Projects() {
   return (
     <div id="projects">
-      <Title order={1}>Projects Library</Title>
+      <Title order={1} m={'1rem'}>
+        Projects Library
+      </Title>
       {/* Filter? */}
       <Grid p={'1rem'}>
         {projectContents.map((project) => {
