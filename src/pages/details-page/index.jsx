@@ -5,6 +5,8 @@ import {
   Text,
   Center,
   BackgroundImage,
+  Image,
+  Flex,
 } from '@mantine/core';
 import classes from '../../styles/Details.module.css';
 import IMAGES from '../../images/Images';
@@ -14,18 +16,17 @@ export default function Details() {
     <div id="details">
       <Box className={classes.hero}>
         <Box className={classes.container}>
-          <BackgroundImage
+          {/* <BackgroundImage
             radius={'xs'}
             src={IMAGES.tempBackground}
             className={classes.backgroundImage}
-          />
+          /> */}
         </Box>
         <Stack className={classes.heroContent}>
-          <Title order={1}>Project Details</Title>
-          <Center>
+          <Center h={'100vh'}>
             <div className={classes.circle}>
               <Center>
-                <Stack>
+                <Stack gap={'xs'}>
                   <Title order={2}>Project Title</Title>
                   <Text>Project Subtitle</Text>
                 </Stack>

@@ -1,27 +1,33 @@
 .hero {
 	min-height: 100vh;
+
+	h2 {
+		font-size: clamp(3.2rem, 15vw, 8rem);
+		line-height: 0.7;
+		font-weight: 900;
+		margin-top: 2rem;
+	}
+
+	p {
+		font-size: clamp(1rem, 4vw, 2rem)
+	}
+
+	.circle {
+		height: min(80vw, 80vh);
+		width: min(80vw, 80vh);
+		/* max-height: 80vh;
+		max-width: 80vh; */
+		box-sizing: border-box;
+		border-radius: 50%;
+		background: linear-gradient(30deg, rgba(176, 237, 23, 0.8) 0%, rgba(247, 255, 226, 0.8) 100%);
+	}
+	
+	.heroContent [class*=Center] {
+		min-height: 100%;
+		text-align: center;
+	}
 }
 
-.hero h2 {
-	font-size: 15vw;
-	line-height: 0.7;
-	font-weight: 900;
-	margin-top: 2rem;
-}
-
-.circle {
-	height: 80vw;
-	width: 80vw;
-	box-sizing: border-box;
-	border-radius: 50%;
-	background: linear-gradient(30deg, rgba(176, 237, 23, 0.8) 0%, rgba(247, 255, 226, 0.8) 100%);
-	margin: 20vh auto;
-}
-
-.heroContent [class*=Center] {
-	min-height: 100%;
-	text-align: center;
-}
 
 .container {
 	height: 100vh;
