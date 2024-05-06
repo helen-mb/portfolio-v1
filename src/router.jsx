@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'projects',
+        path: 'library',
         element: <ProjectsPage />,
       },
       {
@@ -26,8 +26,7 @@ export const router = createBrowserRouter([
         element: <AboutPage />,
       },
       {
-        // TODO: Add project id
-        path: 'details',
+        path: 'project/:id',
         element: <DetailsPage />,
       },
     ],

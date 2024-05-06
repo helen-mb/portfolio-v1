@@ -2,6 +2,7 @@ import { Title, Text, Box, Flex } from '@mantine/core';
 import MobileFeaturedProject from './featured-project-mobile';
 import DesktopFeaturedProject from './featured-project-desktop';
 import classes from '../../styles/Home.module.css';
+import { projectContents } from '../../data/projectContent';
 
 export default function Home() {
   return (
@@ -14,10 +15,17 @@ export default function Home() {
         </Box>
       </Box>
       <Box id="featured-projects" hiddenFrom="sm">
-        {/* TODO: rewrite as a loop */}
-        <MobileFeaturedProject />
-        <MobileFeaturedProject />
-        <MobileFeaturedProject />
+        {projectContents.map((project) => {
+          return (
+            <MobileFeaturedProject
+              key={project.id}
+              id={project.id}
+              title={project.title}
+              stack={project.stack}
+              url={project.url}
+            />
+          );
+        })}
       </Box>
       <Flex
         visibleFrom="sm"
@@ -25,9 +33,17 @@ export default function Home() {
         className={classes.image_container}
         justify={'center'}
       >
-        <DesktopFeaturedProject />
-        <DesktopFeaturedProject />
-        <DesktopFeaturedProject />
+        {projectContents.map((project) => {
+          return (
+            <DesktopFeaturedProject
+              key={project.id}
+              id={project.id}
+              title={project.title}
+              stack={project.stack}
+              url={project.url}
+            />
+          );
+        })}
       </Flex>
     </div>
   );

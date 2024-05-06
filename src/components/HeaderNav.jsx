@@ -34,7 +34,7 @@ function MobileNav() {
           <Tabs.Tab value="home" mr={'auto'} onClick={() => scrollTo({ y: 0 })}>
             <IconCircle />
           </Tabs.Tab>
-          <Tabs.Tab value="projects" onClick={() => scrollTo({ y: 0 })}>
+          <Tabs.Tab value="library" onClick={() => scrollTo({ y: 0 })}>
             <Text size="md">Projects</Text>
           </Tabs.Tab>
           <Tabs.Tab value="about" onClick={() => scrollTo({ y: 0 })}>

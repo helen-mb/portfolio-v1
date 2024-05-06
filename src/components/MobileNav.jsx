@@ -38,7 +38,7 @@ function MobileNav() {
               <Text size="xs">Home</Text>
             </Stack>
           </Tabs.Tab>
-          <Tabs.Tab value="projects" onClick={() => scrollTo({ y: 0 })}>
+          <Tabs.Tab value="library" onClick={() => scrollTo({ y: 0 })}>
             <Stack align="center" gap={'0'}>
               <IconBooks />
               <Text size="xs">Projects</Text>
