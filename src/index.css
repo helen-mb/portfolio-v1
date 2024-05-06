@@ -1,3 +1,7 @@
 #about>div {
 	padding: 1rem;
 }
+
+#home {
+	overflow-x: hidden;
+}
