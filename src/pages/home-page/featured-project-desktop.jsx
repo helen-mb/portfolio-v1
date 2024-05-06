@@ -9,11 +9,13 @@ import {
   BackgroundImage,
   AspectRatio,
 } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
 import IMAGES from '../../images/Images';
 import classes from '../../styles/FeaturedProject.module.css';
 
 export default function DesktopFeaturedProject({ id, title, stack, url }) {
+  const [scroll, scrollTo] = useWindowScroll();
   return (
     <Paper radius={'sm'} withBorder className={classes.desktop_paper}>
       <Stack justify="space-between" className={classes.stack}>
@@ -25,7 +27,11 @@ export default function DesktopFeaturedProject({ id, title, stack, url }) {
           <Anchor href={url} target="_blank">
             Launch
           </Anchor>
-          <Anchor component={Link} to={`project/${id}`}>
+          <Anchor
+            component={Link}
+            to={`project/${id}`}
+            onClick={() => scrollTo({ y: 0 })}
+          >
             Read
           </Anchor>
         </Group>

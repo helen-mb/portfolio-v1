@@ -9,11 +9,13 @@ import {
   AspectRatio,
   Anchor,
 } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
 import IMAGES from '../../images/Images';
 import classes from '../../styles/FeaturedProject.module.css';
 
 export default function MobileFeaturedProject({ id, title, stack, url }) {
+  const [scroll, scrollTo] = useWindowScroll();
   return (
     <AspectRatio ratio={16 / 8} maw={700} className={classes.aspectRatio}>
       <Paper radius={'sm'} withBorder className={classes.paper}>
@@ -32,7 +34,11 @@ export default function MobileFeaturedProject({ id, title, stack, url }) {
           <Anchor href={url} target="_blank">
             Launch
           </Anchor>
-          <Anchor component={Link} to={`project/${id}`}>
+          <Anchor
+            component={Link}
+            to={`project/${id}`}
+            onClick={() => scrollTo({ y: 0 })}
+          >
             Read
           </Anchor>
         </Group>

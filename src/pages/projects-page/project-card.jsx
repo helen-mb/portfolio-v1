@@ -8,11 +8,14 @@ import {
   Anchor,
   Stack,
 } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
 import IMAGES from '../../images/Images';
 import { Link } from 'react-router-dom';
 import classes from '../../styles/ProjectCard.module.css';
 
 export default function ProjectCard({ id, title, stack, url }) {
+  const [scroll, scrollTo] = useWindowScroll();
+
   return (
     <Card padding="lg" radius="md" withBorder className={classes.card}>
       <Box>
@@ -37,7 +40,11 @@ export default function ProjectCard({ id, title, stack, url }) {
           <Anchor href={url} target="_blank">
             Launch
           </Anchor>
-          <Anchor component={Link} to={`/project/${id}`}>
+          <Anchor
+            component={Link}
+            to={`/project/${id}`}
+            onClick={() => scrollTo({ y: 0 })}
+          >
             Read
           </Anchor>
         </Group>
