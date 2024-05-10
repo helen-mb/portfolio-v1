@@ -5,3 +5,22 @@
 #home {
 	overflow-x: hidden;
 }
+
+/* #root {
+	cursor: none;
+} */
+
+.cursor {
+	background-color: var(--mantine-color-myBlue-8);
+	background: linear-gradient(120deg, var(--mantine-color-myBlue-9) 0%, var(--mantine-color-myBlue-5) 100%);
+	opacity: 0.3;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 100%;
+	transform-origin: 100% 100%;
+	/* transform: translate(20%, 20%); */
+	transition: all 50ms ease;
+	position: fixed;
+	pointer-events: none;
+}
+
