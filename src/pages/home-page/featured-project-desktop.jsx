@@ -25,14 +25,16 @@ export default function DesktopFeaturedProject({ id, title, stack, url }) {
         </Box>
         <Group justify="space-between">
           <Anchor href={url} target="_blank">
-            Launch
+            <div className={classes.linkAccent}></div>
+            <p>Launch</p>
           </Anchor>
           <Anchor
             component={Link}
             to={`project/${id}`}
             onClick={() => scrollTo({ y: 0 })}
           >
-            Read
+            <div className={classes.linkAccent}></div>
+            <p>Read</p>
           </Anchor>
         </Group>
       </Stack>
