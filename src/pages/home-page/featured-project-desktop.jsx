@@ -13,6 +13,11 @@ import { useWindowScroll } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
 import IMAGES from '../../images/Images';
 import classes from '../../styles/FeaturedProject.module.css';
+import {
+  IconArrowNarrowRight,
+  IconExternalLink,
+  IconArrowUpRight,
+} from '@tabler/icons-react';
 
 export default function DesktopFeaturedProject({ id, title, stack, url }) {
   const [scroll, scrollTo] = useWindowScroll();
@@ -25,8 +30,9 @@ export default function DesktopFeaturedProject({ id, title, stack, url }) {
         </Box>
         <Group justify="space-between">
           <Anchor href={url} target="_blank">
-            <div className={classes.linkAccent}></div>
-            <p>Launch</p>
+            {/* <div className={classes.linkAccent}></div> */}
+            <p className={classes.launchLink}>Launch</p>
+            <IconArrowUpRight className={classes.launchIcon} />
           </Anchor>
           <Anchor
             component={Link}
@@ -34,7 +40,8 @@ export default function DesktopFeaturedProject({ id, title, stack, url }) {
             onClick={() => scrollTo({ y: 0 })}
           >
             <div className={classes.linkAccent}></div>
-            <p>Read</p>
+            <p className={classes.readLink}>Read</p>
+            <IconArrowNarrowRight />
           </Anchor>
         </Group>
       </Stack>
