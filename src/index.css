@@ -17,7 +17,7 @@
 		border-radius: 100%;
 		transform-origin: 100% 100%;
 		/* transform: translate(20%, 20%); */
-		transition: all 50ms ease;
+		transition: all 100ms ease;
 		position: fixed;
 		pointer-events: none;
 		z-index: -1;

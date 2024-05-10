@@ -50,3 +50,15 @@
 		padding: 1rem;
 	}
 }
+
+@media (min-width: 82em) {
+	.circle {
+		margin-left: 40vw;
+		margin-top: -15vw;
+	}
+
+	.hero h1,
+	.hero p {
+		margin-left: 2rem;
+	}
+}
