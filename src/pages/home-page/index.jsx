@@ -3,8 +3,16 @@ import MobileFeaturedProject from './featured-project-mobile';
 import DesktopFeaturedProject from './featured-project-desktop';
 import classes from '../../styles/Home.module.css';
 import { projectContents } from '../../data/projectContent';
+import IMAGES from '../../images/Images';
+import { useMouse } from '@mantine/hooks';
 
 export default function Home() {
+  const preview = document.getElementById('preview');
+  const { x, y } = useMouse();
+  const movePreview = () => {
+    preview.style.top = `${y}px`;
+    preview.style.left = `${x}px`;
+  };
   return (
     <div id="home">
       <Box className={classes.hero}>
@@ -32,6 +40,7 @@ export default function Home() {
         gap={{ base: 'xs', md: 'md', lg: 'xl' }}
         className={classes.image_container}
         justify={'center'}
+        onMouseMove={movePreview}
       >
         {projectContents.map((project) => {
           return (
@@ -45,6 +54,9 @@ export default function Home() {
           );
         })}
       </Flex>
+      <div id="preview" className={classes.preview}>
+        <img src={IMAGES.testImage} alt="a test image" />
+      </div>
     </div>
   );
 }

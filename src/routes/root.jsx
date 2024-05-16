@@ -17,7 +17,7 @@ export default function Root() {
       <HeaderNav />
       <MobileNav />
       <div id="content">
-        <div className="cursor" ref={cursor}></div>
+        <div id="cursor" className="cursor" ref={cursor}></div>
         <Outlet />
       </div>
       <Footer />

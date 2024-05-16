@@ -1,5 +1,4 @@
 /* Mobile Styles */
-
 .aspectRatio {
 	margin: 1.2rem 0.7rem;
 }
@@ -124,9 +123,10 @@
 
 /* Desktop Styles */
 .desktop_paper {
-	aspect-ratio: 8 / 11;
-	max-width: 20rem;
-	flex: auto;
+	aspect-ratio: 2 / 1;
+	background-color: transparent;
+	min-height: 12rem
+	/* flex: 0 0 auto; */
 }
 
 @media (min-width: 36em) {
@@ -138,7 +138,8 @@
 @media (min-width: 48em) {
 	.stack {
 		h3 {
-			font-size: clamp(2rem, 4vw, 2.8rem)
+			/* font-size: clamp(2rem, 4vw, 2.8rem); */
+			font-size: 3.5rem;
 		}
 		p {
 			font-size: clamp(0.8rem, 1.5vw, 1.1rem)

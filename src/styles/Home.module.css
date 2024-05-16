@@ -33,6 +33,24 @@
 	opacity: 0.8;
 }
 
+div.preview {
+	opacity: 0%;
+	max-width: 300px;
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+	aspect-ratio: 16/9;
+	transition: all 150ms ease;
+	transform-origin: 100% 100%;
+	transform: translate(-48%, -150%);
+	pointer-events: none;
+
+	img {
+		max-height: 100%;
+		object-fit: cover;
+	}
+}
+
 @media (min-width: 36em) {
 	.hero {
 		margin-left: 2rem;
@@ -48,6 +66,8 @@
 
 	.image_container {
 		padding: 1rem;
+		min-height: 50vh;
+		align-items: center;
 	}
 }
 

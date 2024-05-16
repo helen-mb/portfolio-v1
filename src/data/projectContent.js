@@ -1,7 +1,7 @@
 export const projectContents = [
 	{
 		id: 0,
-		title: "Take Five: Movie DB",
+		title: "Take Five",
 		stack: "Design | React| Chakra UI| API",
 		url: "https://take-five.helenburger.com/",
 		git: "https://github.com/helen-mb/fwd-mdb",
@@ -23,7 +23,7 @@ export const projectContents = [
 	},
 	{
 		id: 1,
-		title: "Hunt the Wumpus",
+		title: "Wumpus",
 		stack: "JQuery | JavaScript",
 		url: "https://hunt-the-wumpus.helenburger.com/",
 		git: "https://github.com/helen-mb/fwd-wumpus",
@@ -45,7 +45,7 @@ export const projectContents = [
 	},
 	{
 		id: 2,
-		title: "Visit Wonderland",
+		title: "Wonderland",
 		stack: "Design | HTML | CSS | JS",
 		url: "https://helenburger.com/fwd-wonderland/",
 		git: "https://github.com/helen-mb/fwd-wonderland",
