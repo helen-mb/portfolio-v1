@@ -31,7 +31,7 @@ position: relative;
 	width: 80vw;
 	box-sizing: border-box;
 	border-radius: 50%;
-	background: linear-gradient(30deg, var(--mantine-color-myGreen-9) 0%, var(--mantine-color-myGreen-5) 100%);
+	background: linear-gradient(120deg, var(--mantine-color-myGreen-9) 0%, var(--mantine-color-myGreen-5) 100%);
 	margin: auto;
 	margin-bottom: min(-15rem, -50vw);
 	position: sticky;
