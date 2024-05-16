@@ -1,4 +1,4 @@
-import { Center, Stack, Text, Group, ActionIcon } from '@mantine/core';
+import { Title, Center, Stack, Text, Group, ActionIcon } from '@mantine/core';
 import {
   IconBrandInstagram,
   IconBrandGithub,
@@ -11,7 +11,9 @@ export default function Footer() {
     <footer id="contact">
       <Center>
         <Stack align="center" gap={'xs'}>
-          <Text>Get in Touch!</Text>
+          <Title order={2} className={classes.footerHeading}>
+            Get in Touch!
+          </Title>
           <Text>
             Find me on Linkedin, read my code on Github, and see my art on
             Instagram
