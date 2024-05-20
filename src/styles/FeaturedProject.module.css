@@ -15,6 +15,7 @@
 	width: 100%;
 	height: 100%;
 	background: var(--custom-gradient);
+	opacity: 90%;
 }
 
 .backgroundImage {
@@ -123,10 +124,13 @@
 
 /* Desktop Styles */
 .desktop_paper {
-	aspect-ratio: 2 / 1;
-	background-color: transparent;
-	min-height: 12rem
-	/* flex: 0 0 auto; */
+	aspect-ratio: 1/1;
+	background-color: transparent !important;
+	min-width: min(30vw, 20rem);
+	h3, p {
+		color: white;
+		mix-blend-mode: difference;
+	}
 }
 
 @media (min-width: 36em) {
@@ -138,7 +142,7 @@
 @media (min-width: 48em) {
 	.stack {
 		h3 {
-			/* font-size: clamp(2rem, 4vw, 2.8rem); */
+			font-size: clamp(2rem, 4vw, 2.8rem);
 			font-size: 3.5rem;
 		}
 		p {

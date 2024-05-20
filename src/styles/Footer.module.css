@@ -15,7 +15,9 @@ footer {
 	} */
 
 	h2.footerHeading {
-		font-size: 3rem;
+		font-family: 'Noto Sans';
+		font-size: 2rem;
+		font-weight: 500;
 	}
 
 	p {

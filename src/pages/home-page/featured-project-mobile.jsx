@@ -14,13 +14,19 @@ import { Link } from 'react-router-dom';
 import IMAGES from '../../images/Images';
 import classes from '../../styles/FeaturedProject.module.css';
 
-export default function MobileFeaturedProject({ id, title, stack, url }) {
+export default function MobileFeaturedProject({
+  id,
+  title,
+  stack,
+  url,
+  image,
+}) {
   const [scroll, scrollTo] = useWindowScroll();
   return (
     <AspectRatio ratio={16 / 8} maw={700} className={classes.aspectRatio}>
       <Paper radius={'sm'} withBorder className={classes.paper}>
         <BackgroundImage
-          src={IMAGES.testImage}
+          src={image}
           radius={'sm'}
           className={classes.backgroundImage}
         />

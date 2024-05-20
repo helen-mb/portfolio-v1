@@ -41,10 +41,10 @@ div.preview {
 	overflow: hidden;
 	aspect-ratio: 16/9;
 	transition: all 150ms ease;
-	transform-origin: 100% 100%;
-	transform: translate(-48%, -150%);
+	/* transform-origin: 100% 100%;
+	transform: translate(-48%, -150%); */
 	pointer-events: none;
-
+	z-index: -1;
 	img {
 		max-height: 100%;
 		object-fit: cover;

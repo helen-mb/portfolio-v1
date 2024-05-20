@@ -5,13 +5,29 @@ import classes from '../../styles/Home.module.css';
 import { projectContents } from '../../data/projectContent';
 import IMAGES from '../../images/Images';
 import { useMouse } from '@mantine/hooks';
+import { useState } from 'react';
 
 export default function Home() {
+  const [previewImage, setPreviewImage] = useState('');
   const preview = document.getElementById('preview');
-  const { x, y } = useMouse();
-  const movePreview = () => {
-    preview.style.top = `${y}px`;
-    preview.style.left = `${x}px`;
+  // const { x, y } = useMouse();
+  // const movePreview = () => {
+  //   preview.style.top = `${y}px`;
+  //   preview.style.left = `${x}px`;
+  // };
+  const movePreview = (e) => {
+    const mouseY = e.clientY - 220;
+    const mouseX = e.clientX - 150;
+    if (preview) {
+      preview.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    }
+  };
+  window.addEventListener('mousemove', movePreview);
+  const addPreviewImage = (image) => {
+    setPreviewImage(image);
+  };
+  const removePreviewImage = () => {
+    setPreviewImage('');
   };
   return (
     <div id="home">
@@ -31,6 +47,7 @@ export default function Home() {
               title={project.title}
               stack={project.stack}
               url={project.url}
+              image={project.image}
             />
           );
         })}
@@ -50,12 +67,14 @@ export default function Home() {
               title={project.title}
               stack={project.stack}
               url={project.url}
+              image={project.image}
+              retrievePreviewImage={addPreviewImage}
             />
           );
         })}
       </Flex>
       <div id="preview" className={classes.preview}>
-        <img src={IMAGES.testImage} alt="a test image" />
+        <img src={previewImage} alt="a preview image" />
       </div>
     </div>
   );

@@ -1,28 +1,26 @@
-import {
-  Title,
-  Text,
-  Paper,
-  Stack,
-  Box,
-  Group,
-  Anchor,
-  BackgroundImage,
-  AspectRatio,
-} from '@mantine/core';
+import { Title, Text, Paper, Stack, Box, Group, Anchor } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
 import classes from '../../styles/FeaturedProject.module.css';
 import { IconArrowNarrowRight, IconArrowUpRight } from '@tabler/icons-react';
 
-export default function DesktopFeaturedProject({ id, title, stack, url }) {
+export default function DesktopFeaturedProject({
+  id,
+  title,
+  stack,
+  url,
+  image,
+  retrievePreviewImage,
+}) {
   const [scroll, scrollTo] = useWindowScroll();
   const cursor = document.getElementById('cursor');
   const preview = document.getElementById('preview');
-  const hideCursor = () => {
+  const changeCursor = () => {
     cursor.style.opacity = '0%';
+    retrievePreviewImage(image);
     preview.style.opacity = '100%';
   };
-  const showCursor = () => {
+  const resetCursor = () => {
     cursor.style.removeProperty('opacity');
     preview.style.opacity = '0%';
   };
@@ -32,8 +30,8 @@ export default function DesktopFeaturedProject({ id, title, stack, url }) {
       radius={'sm'}
       withBorder
       className={classes.desktop_paper}
-      onMouseEnter={hideCursor}
-      onMouseLeave={showCursor}
+      onMouseEnter={changeCursor}
+      onMouseLeave={resetCursor}
     >
       <Stack justify="space-between" className={classes.stack}>
         <Box>
