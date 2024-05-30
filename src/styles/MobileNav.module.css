@@ -24,6 +24,7 @@ a.contactButton:active {
 	border-top-right-radius: 3px;
 }
 
-.tab svg {
+.root svg {
 	transform: scale(0.9);
+	stroke-width: 1;
 }

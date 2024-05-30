@@ -3,6 +3,41 @@
 	position: relative;
 }
 
+@keyframes bounce {
+	0% {
+		transform: translateY(0rem);
+	}
+	10% {
+		transform: translateY(1rem);
+	}
+	27% {
+		transform: translateY(0.2rem);
+	}
+	47% {
+		transform: translateY(0.9rem);
+	}
+	53% {
+		transform: translateY(0.7rem);
+	}
+	57% {
+		transform: translateY(1rem);
+	}
+	87.5% {
+		transform: translateY(1.1rem);
+	}
+	100% {
+		transform: translateY(0rem);
+	}
+}
+
+#scroll-down-button svg {
+	animation-name: bounce;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	/* animation-direction: alternate; */
+	animation-timing-function: ease-in;
+}
+
 div.headerNav {
 	margin: 0;
 	padding: 0;

@@ -23,6 +23,23 @@
 	font-size: clamp(1rem, 5vw, 2rem)
 }
 
+a.scrollDownButton {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background-color: var(--mantine-color-myBlue-9);
+	top: 85vh;
+	left: calc(100vw/2 - 1rem);
+	transform: scale(1.5);
+	
+	svg {
+		display: block;
+		margin: auto;
+	}
+}
+
 .circle {
 	height: min(80vw, 800px);
 	width: min(80vw, 800px);
@@ -35,6 +52,10 @@
 	margin-left: auto;
 	margin-right: auto;
 	opacity: 0.8;
+}
+div.featuredProjects {
+	min-height: 100vh;
+	padding-top: 2rem;
 }
 
 div.preview {
