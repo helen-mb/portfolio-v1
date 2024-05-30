@@ -1,9 +1,15 @@
-#about>div {
-	padding: 1rem;
+#home, #about, #projects, #details {
+	overflow-x: clip;
+	position: relative;
 }
 
-#home {
-	overflow-x: hidden;
+div.headerNav {
+	margin: 0;
+	padding: 0;
+	z-index: 1000;
+	position: sticky;
+	top: 0vh;
+	height: fit-content;
 }
 
 /* cursor styles */

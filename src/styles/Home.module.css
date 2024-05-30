@@ -1,12 +1,14 @@
 .hero {
-	min-height: 100vh;
+	/* min-height: 100vh;
+	max-height: 100vh; */
+	height: calc(100vh - 3rem);
 	margin-left: 0.5rem;
-	margin-bottom: 20vw;
+	/* margin-bottom: 22vh; */
 }
 
 .title_box {
 	position: absolute;
-	top: 28vh;
+	top: 20vh;
 }
 
 .hero h1 {
@@ -27,7 +29,9 @@
 	box-sizing: border-box;
 	border-radius: 50%;
 	background: linear-gradient(30deg, var(--mantine-color-myGreen-9) 0%, var(--mantine-color-myGreen-5) 100%);
-	margin-top: -20vw;
+	/* margin-top: -20vw; */
+	position: relative;
+	top: -20vw;
 	margin-left: auto;
 	margin-right: auto;
 	opacity: 0.8;
@@ -66,7 +70,7 @@ div.preview {
 
 	.image_container {
 		padding: 1rem;
-		min-height: 50vh;
+		min-height: 100vh;
 		align-items: center;
 	}
 }
@@ -74,7 +78,8 @@ div.preview {
 @media (min-width: 82em) {
 	.circle {
 		margin-left: 40vw;
-		margin-top: -15vw;
+		/* margin-top: -15vw; */
+		top: -15vw;
 	}
 
 	.hero h1,

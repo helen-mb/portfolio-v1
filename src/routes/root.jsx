@@ -12,9 +12,10 @@ export default function Root() {
     cursor.current.style.top = `${y}px`;
     cursor.current.style.left = `${x}px`;
   };
+
   return (
     <div onMouseMove={changePosition}>
-      <HeaderNav />
+      {/* <HeaderNav id="header" /> */}
       <MobileNav />
       <div id="content">
         <div id="cursor" className="cursor" ref={cursor}></div>

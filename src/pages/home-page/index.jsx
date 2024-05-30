@@ -1,20 +1,14 @@
 import { Title, Text, Box, Flex } from '@mantine/core';
 import MobileFeaturedProject from './featured-project-mobile';
 import DesktopFeaturedProject from './featured-project-desktop';
+import HeaderNav from '../../components/HeaderNav';
 import classes from '../../styles/Home.module.css';
 import { projectContents } from '../../data/projectContent';
-import IMAGES from '../../images/Images';
-import { useMouse } from '@mantine/hooks';
 import { useState } from 'react';
 
 export default function Home() {
   const [previewImage, setPreviewImage] = useState('');
   const preview = document.getElementById('preview');
-  // const { x, y } = useMouse();
-  // const movePreview = () => {
-  //   preview.style.top = `${y}px`;
-  //   preview.style.left = `${x}px`;
-  // };
   const movePreview = (e) => {
     const mouseY = e.clientY - 220;
     const mouseX = e.clientX - 150;
@@ -29,6 +23,7 @@ export default function Home() {
   const removePreviewImage = () => {
     setPreviewImage('');
   };
+
   return (
     <div id="home">
       <Box className={classes.hero}>
@@ -38,6 +33,7 @@ export default function Home() {
           <Text>Designer | Developer</Text>
         </Box>
       </Box>
+      <HeaderNav id="header" />
       <Box id="featured-projects" hiddenFrom="sm">
         {projectContents.map((project) => {
           return (

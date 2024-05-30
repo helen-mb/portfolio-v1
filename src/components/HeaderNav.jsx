@@ -4,7 +4,7 @@ import { IconCircle } from '@tabler/icons-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import classes from '../styles/DesktopNav.module.css';
 
-function MobileNav() {
+function HeaderNav() {
   const navigate = useNavigate();
   const { tabValue } = useParams();
   const [scroll, scrollTo] = useWindowScroll();
@@ -22,7 +22,7 @@ function MobileNav() {
     }
   };
   return (
-    <Container visibleFrom="xs">
+    <Container visibleFrom="xs" className="headerNav">
       <Tabs
         activateTabWithKeyboard={false}
         value={tabValue}
@@ -53,4 +53,4 @@ function MobileNav() {
   );
 }
 
-export default MobileNav;
+export default HeaderNav;

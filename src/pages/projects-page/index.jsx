@@ -1,10 +1,12 @@
 import { Title, Grid } from '@mantine/core';
 import ProjectCard from './project-card';
 import { projectContents } from '../../data/projectContent';
+import HeaderNav from '../../components/HeaderNav';
 
 export default function Projects() {
   return (
     <div id="projects">
+      <HeaderNav id="header" />
       <Title order={1} m={'1rem'}>
         Projects Library
       </Title>

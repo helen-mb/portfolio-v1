@@ -14,6 +14,7 @@ import { useParams } from 'react-router-dom';
 import { projectContents } from '../../data/projectContent';
 import classes from '../../styles/Details.module.css';
 import IMAGES from '../../images/Images';
+import HeaderNav from '../../components/HeaderNav';
 
 export default function Details() {
   const { id } = useParams();
@@ -21,6 +22,7 @@ export default function Details() {
 
   return (
     <div id="details">
+      <HeaderNav id="header" />
       <Box className={classes.hero}>
         <Box className={classes.container}>
           {/* <BackgroundImage

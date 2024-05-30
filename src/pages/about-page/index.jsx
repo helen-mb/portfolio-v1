@@ -19,10 +19,12 @@ import {
   IconSparkles,
 } from '@tabler/icons-react';
 import classes from '../../styles/About.module.css';
+import HeaderNav from '../../components/HeaderNav';
 
 export default function About() {
   return (
     <div id="about">
+      <HeaderNav id="header" />
       <Box className={classes.introBox}>
         <Center>
           <Stack>
