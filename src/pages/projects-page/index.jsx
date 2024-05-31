@@ -1,5 +1,4 @@
-import { Title, Grid, Stack, Box, Text } from '@mantine/core';
-import ProjectCard from './project-card';
+import { Title, Grid, Stack } from '@mantine/core';
 import { projectContents } from '../../data/projectContent';
 import HeaderNav from '../../components/HeaderNav';
 import { useState } from 'react';

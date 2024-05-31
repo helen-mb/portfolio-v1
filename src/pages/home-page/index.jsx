@@ -1,29 +1,11 @@
-import { Title, Text, Box, Flex, Anchor } from '@mantine/core';
+import { Title, Text, Box, Flex, Anchor, Grid } from '@mantine/core';
 import { IconArrowDown } from '@tabler/icons-react';
-import MobileFeaturedProject from './featured-project-mobile';
-import DesktopFeaturedProject from './featured-project-desktop';
+import ProjectCard from '../../components/ProjectCard';
 import HeaderNav from '../../components/HeaderNav';
 import classes from '../../styles/Home.module.css';
 import { projectContents } from '../../data/projectContent';
-import { useState } from 'react';
 
 export default function Home() {
-  // const [previewImage, setPreviewImage] = useState('');
-  // const preview = document.getElementById('preview');
-  // const movePreview = (e) => {
-  //   const mouseY = e.clientY - 220;
-  //   const mouseX = e.clientX - 150;
-  //   if (preview) {
-  //     preview.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-  //   }
-  // };
-  // window.addEventListener('mousemove', movePreview);
-  // const addPreviewImage = (image) => {
-  //   setPreviewImage(image);
-  // };
-  // const removePreviewImage = () => {
-  //   setPreviewImage('');
-  // };
   const scrollToProjects = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -54,44 +36,22 @@ export default function Home() {
       </Box>
       <HeaderNav id="header" />
       <Box id="featured-projects" className={classes.featuredProjects}>
-        <Box hiddenFrom="sm">
+        <Grid p={'1rem'}>
           {projectContents.map((project) => {
             return (
-              <MobileFeaturedProject
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                stack={project.stack}
-                url={project.url}
-                image={project.image}
-              />
+              <Grid.Col span={{ base: 12, sm: 4 }} key={project.id}>
+                <ProjectCard
+                  id={project.id}
+                  title={project.title}
+                  stack={project.stack}
+                  url={project.url}
+                  image={project.image}
+                  summary={project.summary}
+                />
+              </Grid.Col>
             );
           })}
-        </Box>
-        <Flex
-          visibleFrom="sm"
-          gap={{ base: 'xs', md: 'md', lg: 'xl' }}
-          className={classes.image_container}
-          justify={'center'}
-          // onMouseMove={movePreview}
-        >
-          {projectContents.map((project) => {
-            return (
-              <DesktopFeaturedProject
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                stack={project.stack}
-                url={project.url}
-                image={project.image}
-                // retrievePreviewImage={addPreviewImage}
-              />
-            );
-          })}
-        </Flex>
-        {/* <div id="preview" className={classes.preview}>
-          <img src={previewImage} alt="a preview image" />
-        </div> */}
+        </Grid>
       </Box>
     </div>
   );

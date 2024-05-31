@@ -8,12 +8,12 @@ import {
   Anchor,
   Stack,
 } from '@mantine/core';
+import { IconArrowNarrowRight, IconArrowUpRight } from '@tabler/icons-react';
 import { useWindowScroll } from '@mantine/hooks';
-import IMAGES from '../../images/Images';
 import { Link } from 'react-router-dom';
-import classes from '../../styles/ProjectCard.module.css';
+import classes from '../styles/ProjectCard.module.css';
 
-export default function ProjectCard({ id, title, stack, url }) {
+export default function ProjectCard({ id, title, stack, url, image, summary }) {
   const [scroll, scrollTo] = useWindowScroll();
 
   return (
@@ -24,28 +24,27 @@ export default function ProjectCard({ id, title, stack, url }) {
       </Box>
       <Card.Section withBorder className={classes.container}>
         <Image
-          src={IMAGES.testImage}
+          src={image}
           mah={300}
           alt="an image"
           className={classes.backgroundImage}
         />
       </Card.Section>
       <Stack justify="space-between" gap={'xs'}>
-        <Text c={'dimmed'}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sit
-          ullam, voluptatibus magnam obcaecati eos, nemo odit iusto sed soluta
-          nesciunt ipsum veniam modi placeat!
-        </Text>
+        <Text c={'dimmed'}>{summary}</Text>
         <Group justify="space-between">
           <Anchor href={url} target="_blank">
-            Launch
+            <p className={classes.launchLink}>Launch</p>
+            <IconArrowUpRight className={classes.launchIcon} />
           </Anchor>
           <Anchor
             component={Link}
-            to={`/project/${id}`}
+            to={`project/${id}`}
             onClick={() => scrollTo({ y: 0 })}
           >
-            Read
+            <div className={classes.linkAccent}></div>
+            <p className={classes.readLink}>Read</p>
+            <IconArrowNarrowRight />
           </Anchor>
         </Group>
       </Stack>
