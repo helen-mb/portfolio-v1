@@ -8,22 +8,22 @@ import { projectContents } from '../../data/projectContent';
 import { useState } from 'react';
 
 export default function Home() {
-  const [previewImage, setPreviewImage] = useState('');
-  const preview = document.getElementById('preview');
-  const movePreview = (e) => {
-    const mouseY = e.clientY - 220;
-    const mouseX = e.clientX - 150;
-    if (preview) {
-      preview.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-    }
-  };
-  window.addEventListener('mousemove', movePreview);
-  const addPreviewImage = (image) => {
-    setPreviewImage(image);
-  };
-  const removePreviewImage = () => {
-    setPreviewImage('');
-  };
+  // const [previewImage, setPreviewImage] = useState('');
+  // const preview = document.getElementById('preview');
+  // const movePreview = (e) => {
+  //   const mouseY = e.clientY - 220;
+  //   const mouseX = e.clientX - 150;
+  //   if (preview) {
+  //     preview.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+  //   }
+  // };
+  // window.addEventListener('mousemove', movePreview);
+  // const addPreviewImage = (image) => {
+  //   setPreviewImage(image);
+  // };
+  // const removePreviewImage = () => {
+  //   setPreviewImage('');
+  // };
   const scrollToProjects = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -73,7 +73,7 @@ export default function Home() {
           gap={{ base: 'xs', md: 'md', lg: 'xl' }}
           className={classes.image_container}
           justify={'center'}
-          onMouseMove={movePreview}
+          // onMouseMove={movePreview}
         >
           {projectContents.map((project) => {
             return (
@@ -84,14 +84,14 @@ export default function Home() {
                 stack={project.stack}
                 url={project.url}
                 image={project.image}
-                retrievePreviewImage={addPreviewImage}
+                // retrievePreviewImage={addPreviewImage}
               />
             );
           })}
         </Flex>
-        <div id="preview" className={classes.preview}>
+        {/* <div id="preview" className={classes.preview}>
           <img src={previewImage} alt="a preview image" />
-        </div>
+        </div> */}
       </Box>
     </div>
   );
