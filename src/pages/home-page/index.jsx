@@ -55,6 +55,43 @@ export default function Home() {
             );
           })}
         </Grid>
+
+        <Text
+          style={{
+            fontSize: '0.9rem',
+            fontWeight: 'bold',
+            marginTop: '4rem',
+            paddingBottom: '0.5rem',
+            display: 'block',
+            width: '100%',
+            boxShadow: '0px 1px lightgrey',
+          }}
+        >
+          View all projects...
+        </Text>
+      </Box>
+      <Box className={classes.bioSection}>
+        <Text className={classes.miniBio}>
+          <span style={{ fontWeight: 'bold' }}>
+            Goal-Directed yet Process-Oriented
+          </span>
+          , I enjoy problem solving almost as much as I love a fresh slice of
+          buttery toast. My interests lie in user experience and I have a
+          background in physiotherapy and the performing arts.
+        </Text>
+        <Text
+          style={{
+            fontSize: '0.9rem',
+            fontWeight: 'bold',
+            marginTop: '4rem',
+            paddingBottom: '0.5rem',
+            display: 'block',
+            width: '100%',
+            boxShadow: '0px 1px lightgrey',
+          }}
+        >
+          More about me...
+        </Text>
       </Box>
     </div>
   );

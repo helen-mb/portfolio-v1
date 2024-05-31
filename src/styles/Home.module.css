@@ -56,6 +56,16 @@ div.featuredProjects {
 	padding: 2rem 0.7rem;
 }
 
+.bioSection {
+	padding: 0.8rem;
+
+	.miniBio {
+		font-size: 1.3rem;
+		margin: 3rem 2rem;
+		max-width: 65ch;
+	}
+}
+
 @media (min-width: 36em) {
 	.hero {
 		margin-left: 2rem;
