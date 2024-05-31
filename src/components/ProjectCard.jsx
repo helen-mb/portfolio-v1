@@ -17,21 +17,16 @@ export default function ProjectCard({ id, title, stack, url, image, summary }) {
   const [scroll, scrollTo] = useWindowScroll();
 
   return (
-    <Card padding="lg" radius="md" withBorder className={classes.card}>
-      <Box>
+    <Card withBorder className={classes.card}>
+      <Box className={classes.titleBox}>
         <Title order={3}>{title}</Title>
         <Text>{stack}</Text>
       </Box>
-      <Card.Section withBorder className={classes.container}>
-        <Image
-          src={image}
-          mah={300}
-          alt="an image"
-          className={classes.backgroundImage}
-        />
+      <Card.Section withBorder className={classes.imageContainer}>
+        <Image src={image} alt="an image" className={classes.backgroundImage} />
       </Card.Section>
       <Stack justify="space-between" gap={'xs'}>
-        <Text c={'dimmed'}>{summary}</Text>
+        <Text className={classes.summary}>{summary}</Text>
         <Group justify="space-between">
           <Anchor href={url} target="_blank">
             <p className={classes.launchLink}>Launch</p>
