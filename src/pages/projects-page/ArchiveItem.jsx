@@ -1,4 +1,13 @@
-import { Title, Text, Paper, Box, Group, Anchor, Stack } from '@mantine/core';
+import {
+  Title,
+  Text,
+  Paper,
+  Box,
+  Group,
+  Anchor,
+  Stack,
+  Flex,
+} from '@mantine/core';
 import { IconArrowNarrowRight, IconArrowUpRight } from '@tabler/icons-react';
 import { useWindowScroll } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
@@ -30,35 +39,35 @@ export default function ArchiveItem({
 
   return (
     <Paper
-      padding="lg"
-      radius="md"
       withBorder
       className={classes.paper}
       onMouseEnter={changeCursor}
       onMouseLeave={resetCursor}
     >
-      <Box>
-        <Title order={3}>{title}</Title>
-        <Text>{stack}</Text>
-      </Box>
-      <Stack justify="space-between" gap={'xs'}>
-        <Text c={'dimmed'}>{summary}</Text>
-        <Group justify="space-between">
-          <Anchor href={url} target="_blank">
-            <p className={classes.launchLink}>Launch</p>
-            <IconArrowUpRight className={classes.launchIcon} />
-          </Anchor>
-          <Anchor
-            component={Link}
-            to={`../project/${id}`}
-            onClick={() => scrollTo({ y: 0 })}
-          >
-            <div className={classes.linkAccent}></div>
-            <p className={classes.readLink}>Read</p>
-            <IconArrowNarrowRight />
-          </Anchor>
-        </Group>
-      </Stack>
+      <Flex>
+        <Box className={classes.titleGroup}>
+          <Title order={3}>{title}</Title>
+          <Text>{stack}</Text>
+        </Box>
+        <Stack justify="space-between" gap={'xs'}>
+          <Text c={'dimmed'}>{summary}</Text>
+          <Group justify="space-between">
+            <Anchor href={url} target="_blank">
+              <p className={classes.launchLink}>Launch</p>
+              <IconArrowUpRight className={classes.launchIcon} />
+            </Anchor>
+            <Anchor
+              component={Link}
+              to={`../project/${id}`}
+              onClick={() => scrollTo({ y: 0 })}
+            >
+              <div className={classes.linkAccent}></div>
+              <p className={classes.readLink}>Read</p>
+              <IconArrowNarrowRight />
+            </Anchor>
+          </Group>
+        </Stack>
+      </Flex>
     </Paper>
   );
 }

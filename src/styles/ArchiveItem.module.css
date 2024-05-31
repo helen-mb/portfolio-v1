@@ -1,0 +1,105 @@
+.paper {
+	padding: 0.5rem;
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	.titleGroup {
+		min-width: 30vw;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.5;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+
+	a {
+		color: black;
+		font-weight: 600;
+		position: relative;
+
+		p {
+			position: relative;
+			display: block;
+			margin: 0;
+			margin-right: 0.5rem;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+
+		svg {
+			position: absolute;
+			left: 1.4rem;
+			/* top: 0.6rem; */
+			/* top: 0.4rem; */
+			top: min(0.8vw, 0.8rem);
+			/* top: 0.4rem; */
+			opacity: 0;
+			transition: all 0.3s ease;
+			z-index: 0;
+
+			&.launchIcon {
+				top: 0.5rem;
+				left: min(4.5vw, 3rem);
+				transform: scale(0.6);
+			}
+		}
+
+		.linkAccent {
+			z-index: 0;
+			position: absolute;
+			top: 0rem;
+			left: 0rem;
+			max-width: 5rem;
+			max-height: 5rem;
+			height: 2rem;
+			width: 2rem;
+			border-radius: 50%;
+			padding: 0.5rem;
+			opacity: 0;
+			background: linear-gradient(45deg, var(--mantine-color-myBlue-9) 0%, var(--mantine-color-myBlue-7) 100%);
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			text-decoration: none;
+
+			.launchLink {
+				top: -0.2rem;
+				left: 0.2rem;
+				text-decoration: underline;
+			}
+
+			.launchIcon {
+				top: max(-0.5vw, -0.2rem);
+				left: min(6vw, 4rem);
+				transform: scale(0.6);
+			}
+
+			.readLink {
+				/* top: 0.3rem; */
+				left: max(-1.5rem, -1.5vw);
+			}
+
+			svg {
+				opacity: 1;
+				left: min(3vw, 1.8rem);
+			}
+
+			.linkAccent {
+				opacity: 1;
+				width: min(4vw, 2.5rem);
+				height: min(4vw, 2.5rem);
+				opacity: 0.4;
+			}
+		}
+	}
+}
