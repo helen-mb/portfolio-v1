@@ -28,10 +28,6 @@ export default function ProjectCard({ id, title, stack, url, image, summary }) {
       <Stack justify="space-between" gap={'xs'}>
         <Text className={classes.summary}>{summary}</Text>
         <Group justify="space-between">
-          <Anchor href={url} target="_blank">
-            <p className={classes.launchLink}>Launch</p>
-            <IconArrowUpRight className={classes.launchIcon} />
-          </Anchor>
           <Anchor
             component={Link}
             to={`project/${id}`}
@@ -40,6 +36,10 @@ export default function ProjectCard({ id, title, stack, url, image, summary }) {
             <div className={classes.linkAccent}></div>
             <p className={classes.readLink}>Read</p>
             <IconArrowNarrowRight />
+          </Anchor>
+          <Anchor href={url} target="_blank">
+            <p className={classes.launchLink}>Launch</p>
+            <IconArrowUpRight className={classes.launchIcon} />
           </Anchor>
         </Group>
       </Stack>
