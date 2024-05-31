@@ -1,27 +1,23 @@
 .hero {
-	/* min-height: 100vh;
-	max-height: 100vh; */
 	height: calc(100vh - 3rem);
 	margin-left: 0.5rem;
-	/* margin-bottom: 22vh; */
+	
+	.title_box {
+		position: absolute;
+		top: 20vh;
+	}
+	h1 {
+			font-size: clamp(1rem, 30vw, 14rem);
+			max-width: 500px;
+			line-height: 0.7;
+			font-weight: 900;
+			margin-bottom: 1rem;
+		}
+	p {
+		font-size: clamp(1rem, 5vw, 2rem)
+	}
 }
 
-.title_box {
-	position: absolute;
-	top: 20vh;
-}
-
-.hero h1 {
-	font-size: clamp( 1rem, 30vw, 14rem);
-	max-width: 500px;
-	line-height: 0.7;
-	font-weight: 900;
-	margin-bottom: 1rem;
-}
-
-.hero p {
-	font-size: clamp(1rem, 5vw, 2rem)
-}
 
 a.scrollDownButton {
 	position: absolute;
@@ -37,6 +33,7 @@ a.scrollDownButton {
 	svg {
 		display: block;
 		margin: auto;
+		color: var(--mantine-color-myBlue-2);
 	}
 }
 
@@ -53,58 +50,51 @@ a.scrollDownButton {
 	margin-right: auto;
 	opacity: 0.8;
 }
+
 div.featuredProjects {
 	min-height: 100vh;
-	padding-top: 2rem;
-}
-
-div.preview {
-	opacity: 0%;
-	max-width: 300px;
-	position: fixed;
-	top: 0;
-	overflow: hidden;
-	aspect-ratio: 16/9;
-	transition: all 150ms ease;
-	/* transform-origin: 100% 100%;
-	transform: translate(-48%, -150%); */
-	pointer-events: none;
-	z-index: -1;
-	img {
-		max-height: 100%;
-		object-fit: cover;
-	}
+	padding: 2rem 0.7rem;
 }
 
 @media (min-width: 36em) {
 	.hero {
 		margin-left: 2rem;
 	}
+	div.featuredProjects {
+		padding: 5rem 1.2rem;
+	}
 }
 
-/* desktop styles */
 
+/* desktop styles */
 @media (min-width: 48em) {
 	.circle {
 		margin-left: 30vw;
 	}
-
-	.image_container {
-		padding: 1rem;
-		min-height: 100vh;
-		align-items: center;
+	
+	div.featuredProjects {
+		padding: 8rem 0.7rem;
 	}
+}
+
+@media (min-width: 64em) {
+	div.featuredProjects {
+			padding: 8rem 1.5rem;
+		}
 }
 
 @media (min-width: 82em) {
 	.circle {
 		margin-left: 40vw;
-		/* margin-top: -15vw; */
 		top: -15vw;
 	}
 
 	.hero h1,
 	.hero p {
 		margin-left: 2rem;
+	}
+
+	div.featuredProjects {
+		padding: 10rem 4rem;
 	}
 }

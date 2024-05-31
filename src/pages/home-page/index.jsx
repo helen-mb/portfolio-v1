@@ -36,7 +36,10 @@ export default function Home() {
       </Box>
       <HeaderNav id="header" />
       <Box id="featured-projects" className={classes.featuredProjects}>
-        <Grid p={'1rem'}>
+        <Grid
+          className={classes.gridContainer}
+          gutter={{ base: 'xl', sm: 'sm', lg: 'lg' }}
+        >
           {projectContents.map((project) => {
             return (
               <Grid.Col span={{ base: 12, sm: 4 }} key={project.id}>
