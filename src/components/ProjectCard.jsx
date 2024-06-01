@@ -25,7 +25,7 @@ export default function ProjectCard({ id, title, stack, url, image, summary }) {
       <Card.Section withBorder className={classes.imageContainer}>
         <Image src={image} alt="an image" className={classes.backgroundImage} />
       </Card.Section>
-      <Stack justify="space-between" gap={'xs'}>
+      <Stack style={{ flexGrow: '1' }} justify="space-between" gap={'xs'}>
         <Text className={classes.summary}>{summary}</Text>
         <Group justify="space-between">
           <Anchor

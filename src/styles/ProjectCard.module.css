@@ -21,6 +21,18 @@ img.backgroundImage {
 
 div.card {
 	padding: 0.8rem;
+	height: 100%;
+	transition: all ease 0.3s;
+
+	&:hover {
+		transform: translateY(-4px) scale(1.05);
+		z-index: 1;
+		background: linear-gradient(20deg, var(--mantine-color-myBlue-3) 0%, var(--mantine-color-myBlue-1) 100%);
+		/* background-color: var(--mantine-color-myBlue-1); */
+		p, h3, .summary, svg {
+			color: white;
+		}
+	}
 
 	h3 {
 		font-size: 3rem;
@@ -42,12 +54,12 @@ div.card {
 		margin: 0;
 		overflow: hidden;
 		display: -webkit-box;
-		-webkit-line-clamp: 3;
-		line-clamp: 3;
+		-webkit-line-clamp: 4;
+		line-clamp: 4;
 		-webkit-box-orient: vertical;
 
 		&.summary {
-			margin: 1.5rem 0 0rem;
+			margin: 1.5rem 0 3rem;
 			color: slategray;
 		}
 	}
