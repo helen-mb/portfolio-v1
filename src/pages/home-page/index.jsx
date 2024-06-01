@@ -4,6 +4,8 @@ import ProjectCard from '../../components/ProjectCard';
 import HeaderNav from '../../components/HeaderNav';
 import classes from '../../styles/Home.module.css';
 import { projectContents } from '../../data/projectContent';
+import { Link } from 'react-router-dom';
+import { useWindowScroll } from '@mantine/hooks';
 
 export default function Home() {
   const scrollToProjects = (e, targetId) => {
@@ -16,6 +18,8 @@ export default function Home() {
       });
     }
   };
+
+  const [scroll, scrollTo] = useWindowScroll();
 
   return (
     <div id="home">
@@ -56,19 +60,14 @@ export default function Home() {
           })}
         </Grid>
 
-        <Text
-          style={{
-            fontSize: '0.9rem',
-            fontWeight: 'bold',
-            marginTop: '4rem',
-            paddingBottom: '0.5rem',
-            display: 'block',
-            width: '100%',
-            boxShadow: '0px 1px lightgrey',
-          }}
+        <Anchor
+          component={Link}
+          to={'library'}
+          onClick={() => scrollTo({ y: 0 })}
+          className={classes.internalLink}
         >
           View all projects...
-        </Text>
+        </Anchor>
       </Box>
       <Box className={classes.bioSection}>
         <Text className={classes.miniBio}>
@@ -79,19 +78,14 @@ export default function Home() {
           buttery toast. My interests lie in user experience and I have a
           background in physiotherapy and the performing arts.
         </Text>
-        <Text
-          style={{
-            fontSize: '0.9rem',
-            fontWeight: 'bold',
-            marginTop: '4rem',
-            paddingBottom: '0.5rem',
-            display: 'block',
-            width: '100%',
-            boxShadow: '0px 1px lightgrey',
-          }}
+        <Anchor
+          component={Link}
+          to={'about'}
+          onClick={() => scrollTo({ y: 0 })}
+          className={classes.internalLink}
         >
           More about me...
-        </Text>
+        </Anchor>
       </Box>
     </div>
   );

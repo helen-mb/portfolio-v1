@@ -29,7 +29,8 @@ a.scrollDownButton {
 	top: 85vh;
 	left: calc(100vw/2 - 1rem);
 	transform: scale(1.5);
-	
+	mix-blend-mode: multiply;
+
 	svg {
 		display: block;
 		margin: auto;
@@ -43,27 +44,39 @@ a.scrollDownButton {
 	box-sizing: border-box;
 	border-radius: 50%;
 	background: linear-gradient(30deg, var(--mantine-color-myGreen-9) 0%, var(--mantine-color-myGreen-5) 100%);
-	/* margin-top: -20vw; */
-	position: relative;
+	position: fixed;
+	margin: 0 7vw;
 	top: -20vw;
-	margin-left: auto;
-	margin-right: auto;
 	opacity: 0.8;
+	z-index: -1;
 }
 
 div.featuredProjects {
-	min-height: 100vh;
 	padding: 2rem 0.7rem;
+	background: linear-gradient(180deg, rgb(255, 255, 255, 0.75) 0%, rgb(255, 255, 255, 0.85) 50%, white 100%);
 }
 
-.bioSection {
+div.bioSection {
 	padding: 0.8rem;
+	background-color: white;
+	padding-bottom: 6rem;
 
 	.miniBio {
 		font-size: 1.3rem;
-		margin: 3rem 2rem;
+		margin: 3rem 1.5rem 8rem;
 		max-width: 65ch;
 	}
+}
+
+a.internalLink {
+	color: black;
+	font-size: 0.9rem;
+	font-weight: bold;
+	margin-top: 4rem;
+	padding-bottom: 0.5rem;
+	display: block;
+	width: 100%;
+	box-shadow: 0px 1px lightgrey;
 }
 
 @media (min-width: 36em) {
@@ -85,12 +98,22 @@ div.featuredProjects {
 	div.featuredProjects {
 		padding: 8rem 0.7rem;
 	}
+
+	div.bioSection {
+		.miniBio {
+		margin: 3rem 3rem 12rem 33vw;
+		}
+	}
 }
 
 @media (min-width: 64em) {
 	div.featuredProjects {
 			padding: 8rem 1.5rem;
 		}
+	div.bioSection {
+		padding: 1.5rem;
+		padding-bottom: 6rem;
+	}
 }
 
 @media (min-width: 82em) {
@@ -106,5 +129,9 @@ div.featuredProjects {
 
 	div.featuredProjects {
 		padding: 10rem 4rem;
+	}
+	div.bioSection {
+		padding: 4rem;
+		padding-bottom: 6rem;
 	}
 }

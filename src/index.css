@@ -1,3 +1,7 @@
+* {
+	scroll-behavior: smooth;
+}
+
 #home, #about, #projects, #details {
 	overflow-x: clip;
 	position: relative;
