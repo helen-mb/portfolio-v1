@@ -1,30 +1,68 @@
 footer {
 	background: var(--custom-gradient);
-	height: 100vh;
 	text-align: center;
-	padding: 0.5rem;
 
-	div {
-		min-height: 100%;
+	div.contactSection {
+		min-height: calc(100vh - 3rem);
+
+		h2.footerHeading {
+			font-family: 'Noto Sans';
+			font-size: 2rem;
+			font-weight: 500;
+		}
+		p {
+			max-width: 23rem;
+		}
+		a.socialLink {
+			margin-top: 1rem;
+		}
+		a.socialLink:hover,
+		a.socialLink:active {
+			color: var(--mantine-color-myBlue-3);
+			background-color: white;
+		}
 	}
 
-	h2.footerHeading {
-		font-family: 'Noto Sans';
-		font-size: 2rem;
-		font-weight: 500;
-	}
-
-	p {
-		max-width: 23rem;
-	}
-
-	a.socialLink {
-		margin-top: 1rem;
-	}
-
-	a.socialLink:hover,
-	a.socialLink:active {
-		color: var(--mantine-color-myBlue-3);
+	div.footNotes {
 		background-color: white;
+		height: 5rem;
+		margin-bottom: 3.5rem;
+
+		& > div {
+			align-items: flex-end;
+			justify-content: center;
+			height: 100%;
+			padding-bottom: 0.8rem;
+			gap: 0;
+		}
+		p {
+			font-size: 0.8rem;
+			margin: 0 1rem;
+		}
+		a {
+			font-weight: bold;
+			color: black;
+			font-size: inherit;
+
+			svg {
+				transform: scale(0.5) translate(-0.5rem, 1rem);
+			}
+		}
+	}
+
+}
+
+@media (min-width: 36em) {
+	footer div.footNotes {
+		margin: 0;
+	}
+}
+
+@media (min-width: 44em) {
+	footer div.footNotes {
+		height: 3rem;
+		div {
+			justify-content: space-between;
+		}
 	}
 }

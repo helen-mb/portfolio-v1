@@ -1,15 +1,26 @@
-import { Title, Center, Stack, Text, Group, ActionIcon } from '@mantine/core';
+import {
+  Title,
+  Center,
+  Stack,
+  Text,
+  Group,
+  ActionIcon,
+  Box,
+  Anchor,
+} from '@mantine/core';
 import {
   IconBrandInstagram,
   IconBrandGithub,
   IconBrandLinkedin,
+  IconArrowUpRight,
 } from '@tabler/icons-react';
 import classes from '../styles/Footer.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer id="contact">
-      <Center>
+      <Center className={classes.contactSection}>
         <Stack align="center" gap={'xs'}>
           <Title order={2} className={classes.footerHeading}>
             Get in Touch!
@@ -61,6 +72,24 @@ export default function Footer() {
           </Group>
         </Stack>
       </Center>
+      <Box className={classes.footNotes}>
+        <Group>
+          <p>
+            Made in Canada, on{' '}
+            <Anchor
+              as={Link}
+              target="_blank"
+              href="https://www.songheesnation.ca/community/l-k-ng-n-traditional-territory"
+            >
+              lək̓ʷəŋən territory.
+              <IconArrowUpRight />
+            </Anchor>{' '}
+          </p>
+          <p>
+            &copy; 2024 Helen Burger | Built using Vite, React JS, & Mantine
+          </p>
+        </Group>
+      </Box>
     </footer>
   );
 }
