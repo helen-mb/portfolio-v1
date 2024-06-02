@@ -1,12 +1,24 @@
-.paper {
-	padding: 0.5rem;
+div.paper {
+	padding-bottom: 1rem;
+	margin: 0 1rem;
+	box-shadow: 0px 1px lightgrey;
+	background-color: transparent;
+
+	&:last-of-type {
+		box-shadow: none;
+		margin-bottom: 5rem;
+	}
 
 	h3 {
 		font-size: 2rem;
 	}
 
 	.titleGroup {
-		min-width: 30vw;
+		min-width: 35vw;
+	}
+
+	.summary {
+		margin-top: 0.5rem;
 	}
 
 	p {
@@ -38,17 +50,14 @@
 		svg {
 			position: absolute;
 			left: 1.4rem;
-			/* top: 0.6rem; */
-			/* top: 0.4rem; */
-			top: min(0.8vw, 0.8rem);
-			/* top: 0.4rem; */
+			top: 0rem;
 			opacity: 0;
 			transition: all 0.3s ease;
 			z-index: 0;
 
 			&.launchIcon {
 				top: 0.5rem;
-				left: min(4.5vw, 3rem);
+				left: 2rem;
 				transform: scale(0.6);
 			}
 		}
@@ -57,11 +66,11 @@
 			z-index: 0;
 			position: absolute;
 			top: 0rem;
-			left: 0rem;
-			max-width: 5rem;
-			max-height: 5rem;
-			height: 2rem;
-			width: 2rem;
+			left: 0.8rem;
+			/* max-width: 5rem;
+			max-height: 5rem; */
+			height: 1rem;
+			width: 1rem;
 			border-radius: 50%;
 			padding: 0.5rem;
 			opacity: 0;
@@ -73,33 +82,39 @@
 			text-decoration: none;
 
 			.launchLink {
-				top: -0.2rem;
-				left: 0.2rem;
+				left: -0.5rem;
 				text-decoration: underline;
 			}
 
 			.launchIcon {
-				top: max(-0.5vw, -0.2rem);
-				left: min(6vw, 4rem);
+				top: -0.3rem;
+				left: 3rem;
 				transform: scale(0.6);
 			}
 
 			.readLink {
-				/* top: 0.3rem; */
-				left: max(-1.5rem, -1.5vw);
-			}
-
-			svg {
-				opacity: 1;
-				left: min(3vw, 1.8rem);
+				left: 0.5rem;
 			}
 
 			.linkAccent {
 				opacity: 1;
-				width: min(4vw, 2.5rem);
-				height: min(4vw, 2.5rem);
+				width: 2rem;
+				height: 2rem;
 				opacity: 0.4;
+				top: -0.2rem;
+				left: 1.9rem;
+			}
+
+			svg {
+				opacity: 1;
+				left: 3rem;
 			}
 		}
+	}
+}
+
+@media (min-width: 48em) {
+	div.paper {
+		margin: 0 3rem;
 	}
 }

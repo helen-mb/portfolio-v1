@@ -26,26 +26,10 @@ export default function Projects() {
   return (
     <div id="projects">
       <HeaderNav id="header" />
-      <Title order={1} m={'1rem'}>
+      <Title order={1} m={'1rem'} className={classes.pageTitle}>
         Projects Library
       </Title>
       {/* Filter? */}
-      <Grid p={'1rem'}>
-        {projectContents.map((project) => {
-          return (
-            <Grid.Col span={{ base: 12, xs: 6, md: 4, xl: 3 }} key={project.id}>
-              {/* <ProjectCard
-                id={project.id}
-                title={project.title}
-                stack={project.stack}
-                url={project.url}
-                image={project.image}
-                summary={project.summary}
-              /> */}
-            </Grid.Col>
-          );
-        })}
-      </Grid>
       <Stack onMouseMove={movePreview}>
         {projectContents.map((project) => {
           return (

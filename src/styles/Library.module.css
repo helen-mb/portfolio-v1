@@ -16,3 +16,15 @@ div.preview {
 		object-fit: cover;
 	}
 }
+
+h1.pageTitle {
+	font-size: 4rem;
+	line-height: 0.9;
+	padding: 4rem 0;
+}
+
+@media (min-width: 48em) {
+	h1.pageTitle {
+		padding: 4rem 1.9rem;
+	}
+}

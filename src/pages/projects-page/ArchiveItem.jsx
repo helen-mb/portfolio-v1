@@ -39,23 +39,21 @@ export default function ArchiveItem({
 
   return (
     <Paper
-      withBorder
+      radius={0}
       className={classes.paper}
       onMouseEnter={changeCursor}
       onMouseLeave={resetCursor}
     >
-      <Flex>
+      <Flex gap={'sm'}>
         <Box className={classes.titleGroup}>
           <Title order={3}>{title}</Title>
           <Text>{stack}</Text>
         </Box>
         <Stack justify="space-between" gap={'xs'}>
-          <Text c={'dimmed'}>{summary}</Text>
-          <Group justify="space-between">
-            <Anchor href={url} target="_blank">
-              <p className={classes.launchLink}>Launch</p>
-              <IconArrowUpRight className={classes.launchIcon} />
-            </Anchor>
+          <Text c={'dimmed'} className={classes.summary}>
+            {summary}
+          </Text>
+          <Group justify="flex-start" gap={'xl'}>
             <Anchor
               component={Link}
               to={`../project/${id}`}
@@ -64,6 +62,10 @@ export default function ArchiveItem({
               <div className={classes.linkAccent}></div>
               <p className={classes.readLink}>Read</p>
               <IconArrowNarrowRight />
+            </Anchor>
+            <Anchor href={url} target="_blank">
+              <p className={classes.launchLink}>Launch</p>
+              <IconArrowUpRight className={classes.launchIcon} />
             </Anchor>
           </Group>
         </Stack>
