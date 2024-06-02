@@ -18,6 +18,8 @@ import classes from '../styles/Footer.module.css';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const date = new Date();
+
   return (
     <footer id="contact">
       <Center className={classes.contactSection}>
@@ -86,7 +88,15 @@ export default function Footer() {
             </Anchor>{' '}
           </p>
           <p>
-            &copy; 2024 Helen Burger | Built using Vite, React JS, & Mantine
+            &copy; {date.getFullYear()}{' '}
+            <Anchor
+              as={Link}
+              target="_blank"
+              href="https://github.com/helen-mb"
+            >
+              Helen Burger
+            </Anchor>{' '}
+            | &#9829; Built using Vite, React JS, & Mantine
           </p>
         </Group>
       </Box>
