@@ -1,5 +1,5 @@
 import { Title, Text, Box, Flex, Anchor, Grid } from '@mantine/core';
-import { IconArrowDown } from '@tabler/icons-react';
+import { IconArrowDown, IconArrowNarrowRight } from '@tabler/icons-react';
 import ProjectCard from '../../components/ProjectCard';
 import HeaderNav from '../../components/HeaderNav';
 import classes from '../../styles/Home.module.css';
@@ -30,7 +30,6 @@ export default function Home() {
       });
     }
   };
-
   const [scroll, scrollTo] = useWindowScroll();
 
   return (
@@ -77,7 +76,9 @@ export default function Home() {
           onClick={() => scrollTo({ y: 0 })}
           className={classes.internalLink}
         >
-          View all projects...
+          <div className={classes.linkAccent}></div>
+          <p className={classes.linkText}>View all projects</p>
+          <IconArrowNarrowRight />
         </Anchor>
       </Box>
       <Box className={classes.bioSection}>
@@ -95,7 +96,9 @@ export default function Home() {
           onClick={() => scrollTo({ y: 0 })}
           className={classes.internalLink}
         >
-          More about me...
+          <div className={classes.linkAccent}></div>
+          <p className={classes.linkText}>More about me</p>
+          <IconArrowNarrowRight />
         </Anchor>
       </Box>
     </div>
