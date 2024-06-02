@@ -30,11 +30,20 @@ a.scrollDownButton {
 	left: calc(100vw/2 - 1rem);
 	transform: scale(1.5);
 	mix-blend-mode: multiply;
+	transition: all 0.3s ease;
 
 	svg {
 		display: block;
 		margin: auto;
 		color: var(--mantine-color-myBlue-2);
+	}
+
+	&:hover {
+		background-color: var(--mantine-color-myBlue-1);
+
+		svg.scrollDownArrow{
+			color: var(--mantine-color-myBlue-8);
+		}
 	}
 }
 

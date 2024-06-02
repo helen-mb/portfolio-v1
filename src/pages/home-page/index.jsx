@@ -35,7 +35,7 @@ export default function Home() {
           className={classes.scrollDownButton}
           id="scroll-down-button"
         >
-          <IconArrowDown />
+          <IconArrowDown className={classes.scrollDownArrow} />
         </Anchor>
       </Box>
       <HeaderNav id="header" />

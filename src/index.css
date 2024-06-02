@@ -42,6 +42,10 @@
 	animation-timing-function: ease-in;
 }
 
+#scroll-down-button:hover svg {
+	animation: none;
+}
+
 div.headerNav {
 	margin: 0;
 	padding: 0;

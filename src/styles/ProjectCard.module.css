@@ -27,8 +27,11 @@ div.card {
 	&:hover {
 		transform: translateY(-4px) scale(1.05);
 		z-index: 1;
-		background: linear-gradient(20deg, var(--mantine-color-myBlue-3) 0%, var(--mantine-color-myBlue-1) 100%);
-		/* background-color: var(--mantine-color-myBlue-1); */
+		/* background: linear-gradient(20deg, var(--mantine-color-myBlue-9) 0%, var(--mantine-color-myBlue-8) 100%);
+		.summary {
+			color: black;
+		} */
+		background-color: var(--mantine-color-myBlue-1);
 		p, h3, .summary, svg {
 			color: white;
 		}
