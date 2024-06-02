@@ -40,13 +40,13 @@ export default function Home() {
       </Box>
       <HeaderNav id="header" />
       <Box id="featured-projects" className={classes.featuredProjects}>
-        <Grid
+        {/* <Grid
           className={classes.gridContainer}
-          gutter={{ base: 'xl', sm: 'sm', lg: 'lg' }}
+          gutter={{ base: 'xl', md: 'md', lg: 'lg' }}
         >
           {projectContents.map((project) => {
             return (
-              <Grid.Col span={{ base: 12, sm: 4 }} key={project.id}>
+              <Grid.Col span={{ base: 12, md: 6, lg: 4 }} key={project.id}>
                 <ProjectCard
                   id={project.id}
                   title={project.title}
@@ -58,7 +58,24 @@ export default function Home() {
               </Grid.Col>
             );
           })}
-        </Grid>
+        </Grid> */}
+        <Flex
+          className={classes.flexContainer}
+          gap={{ base: 'xl', sm: 'md', lg: 'lg' }}
+        >
+          {projectContents.map((project) => {
+            return (
+              <ProjectCard
+                id={project.id}
+                title={project.title}
+                stack={project.stack}
+                url={project.url}
+                image={project.image}
+                summary={project.summary}
+              />
+            );
+          })}
+        </Flex>
 
         <Anchor
           component={Link}

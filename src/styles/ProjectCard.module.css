@@ -20,9 +20,11 @@ img.backgroundImage {
 }
 
 div.card {
-	padding: 0.8rem;
 	height: 100%;
+	max-width: 550px;
+	min-width: 350px;
 	transition: all ease 0.3s;
+	flex: 1 1 350px;
 
 	&:hover {
 		transform: translateY(-4px) scale(1.05);
@@ -49,6 +51,7 @@ div.card {
 	.imageContainer {
 		aspect-ratio: 16 / 9;
 		overflow: hidden;
+		margin-bottom: 1rem;
 	}
 
 	p {
@@ -57,12 +60,12 @@ div.card {
 		margin: 0;
 		overflow: hidden;
 		display: -webkit-box;
-		-webkit-line-clamp: 4;
-		line-clamp: 4;
+		-webkit-line-clamp: 3;
+		line-clamp: 3;
 		-webkit-box-orient: vertical;
 
 		&.summary {
-			margin: 1.5rem 0 3rem;
+			margin: 0.5rem 0 1.2rem;
 			color: slategray;
 		}
 	}
@@ -147,91 +150,4 @@ div.card {
 			}
 		}
 	}
-}
-
-@media (min-width: 36em) {
-	div.card {
-		p {
-			font-size: 1rem;
-		}
-		a svg {
-			top: 0.1rem;
-		}
-		a:hover {
-			.launchIcon {
-				left: 3rem;
-			}
-			svg {
-				left: 3.2rem;
-			}
-			.linkAccent {
-				left: 1.9rem;
-			}
-		}
-	}
-}
-
-@media (min-width: 48em) {
-	div.card {
-		.titleBox {
-			height: 4rem;
-		}
-		h3 {
-			font-size: 2rem;
-		}
-		p {
-			font-size: 0.9rem;
-		}
-		a svg {
-			top: 0rem;
-		}
-		a:hover {
-			.launchIcon {
-				left: 2.5rem;
-			}
-			svg {
-				left: 3rem;
-			}
-			.linkAccent {
-				left: 1.7rem;
-			}
-		}
-	}
-}
-
-@media (min-width: 64em) {
-	div.card {
-		.titleBox {
-				height: 5rem;
-			}
-		h3 {
-			font-size: 2.5rem;
-		}
-		p {
-			font-size: 1rem;
-		}
-		a svg {
-			top: 0.1rem;
-		}
-		a:hover {
-			.launchIcon {
-				left: 3rem;
-			}
-			svg {
-				left: 3.2rem;
-			}
-
-			.linkAccent {
-				left: 1.9rem;
-			}
-		}
-	}
-}
-
-@media (min-width: 82em) {
-	div.card {
-			h3 {
-				font-size: 3rem;
-			}
-		}
 }
