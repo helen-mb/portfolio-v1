@@ -57,7 +57,7 @@ a.scrollDownButton {
 	margin: 0 7vw;
 	top: -20vw;
 	opacity: 0.8;
-	z-index: -1;
+	z-index: -10;
 }
 
 div.featuredProjects {

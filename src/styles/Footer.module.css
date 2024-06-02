@@ -1,6 +1,7 @@
 footer {
 	background: var(--custom-gradient);
 	text-align: center;
+	z-index: 1;
 
 	div.contactSection {
 		min-height: calc(100vh - 3rem);

@@ -8,6 +8,18 @@ import { Link } from 'react-router-dom';
 import { useWindowScroll } from '@mantine/hooks';
 
 export default function Home() {
+  const cursor = document.getElementById('cursor');
+  const changeCursor = () => {
+    if (cursor) {
+      cursor.style.opacity = '0%';
+    }
+  };
+  const resetCursor = () => {
+    if (cursor) {
+      cursor.style.removeProperty('opacity');
+    }
+  };
+
   const scrollToProjects = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -34,31 +46,14 @@ export default function Home() {
           onClick={(e) => scrollToProjects(e, 'featured-projects')}
           className={classes.scrollDownButton}
           id="scroll-down-button"
+          onMouseEnter={changeCursor}
+          onMouseLeave={resetCursor}
         >
           <IconArrowDown className={classes.scrollDownArrow} />
         </Anchor>
       </Box>
       <HeaderNav id="header" />
       <Box id="featured-projects" className={classes.featuredProjects}>
-        {/* <Grid
-          className={classes.gridContainer}
-          gutter={{ base: 'xl', md: 'md', lg: 'lg' }}
-        >
-          {projectContents.map((project) => {
-            return (
-              <Grid.Col span={{ base: 12, md: 6, lg: 4 }} key={project.id}>
-                <ProjectCard
-                  id={project.id}
-                  title={project.title}
-                  stack={project.stack}
-                  url={project.url}
-                  image={project.image}
-                  summary={project.summary}
-                />
-              </Grid.Col>
-            );
-          })}
-        </Grid> */}
         <Flex
           className={classes.flexContainer}
           gap={{ base: 'xl', sm: 'md', lg: 'lg' }}
@@ -76,7 +71,6 @@ export default function Home() {
             );
           })}
         </Flex>
-
         <Anchor
           component={Link}
           to={'library'}
