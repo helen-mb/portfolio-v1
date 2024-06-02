@@ -77,8 +77,8 @@ div.bioSection {
 	padding-bottom: 6rem;
 
 	.miniBio {
-		font-size: 1.3rem;
-		margin: 3rem 1.5rem 8rem;
+		font-size: 1.5rem;
+		margin: 3rem 1.5rem 5rem;
 		max-width: 65ch;
 	}
 }
@@ -99,7 +99,14 @@ a.internalLink {
 		margin-left: 2rem;
 	}
 	div.featuredProjects {
-		padding: 5rem 1.2rem;
+		padding: 2rem 1.2rem;
+	}
+
+	div.bioSection {
+		padding-bottom: 2rem 1.2rem 6rem;
+		.miniBio {
+			margin-left: 20vw;
+		}
 	}
 }
 
@@ -116,7 +123,8 @@ a.internalLink {
 
 	div.bioSection {
 		.miniBio {
-		margin: 3rem 3rem 12rem 33vw;
+		margin: 0rem 3rem 8rem 33vw;
+		font-size: 1.8rem;
 		}
 	}
 }
@@ -128,6 +136,9 @@ a.internalLink {
 	div.bioSection {
 		padding: 1.5rem;
 		padding-bottom: 6rem;
+		.miniBio {
+			font-size: 2rem;
+		}
 	}
 }
 
@@ -146,7 +157,10 @@ a.internalLink {
 		padding: 10rem 4rem;
 	}
 	div.bioSection {
-		padding: 4rem;
+		padding: 1.5rem 4rem;
 		padding-bottom: 6rem;
+		.miniBio {
+			margin-bottom: 10rem;
+		}
 	}
 }
